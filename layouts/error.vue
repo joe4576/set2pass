@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: 'EmptyLayout',
-  layout: 'empty',
+  name: "EmptyLayout",
+  layout: "empty",
   props: {
     error: {
       type: Object,
@@ -22,18 +22,18 @@ export default {
   },
   data() {
     return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred',
-    }
+      pageNotFound: "404 Not Found",
+      otherError: "An error occurred",
+    };
   },
   head() {
     const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
+      this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
     return {
       title,
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>

@@ -63,13 +63,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "@nuxtjs/composition-api"
+import { defineComponent, ref } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {
-    const clipped = ref(false)
-    const drawer = ref(false)
-    const fixed = ref(false)
+    const clipped = ref(false);
+    const drawer = ref(false);
+    const fixed = ref(false);
     const items = [
       {
         icon: "mdi-apps",
@@ -81,11 +81,11 @@ export default defineComponent({
         title: "Inspire",
         to: "/inspire",
       },
-    ]
-    const miniVariant = ref(false)
-    const right = ref(false)
-    const rightDrawer = ref(false)
-    const title = "Vuetify.js"
+    ];
+    const miniVariant = ref(false);
+    const right = ref(false);
+    const rightDrawer = ref(false);
+    const title = "Vuetify.js";
 
     return {
       clipped,
@@ -96,7 +96,7 @@ export default defineComponent({
       right,
       rightDrawer,
       title,
-    }
+    };
   },
-})
+});
 </script>
