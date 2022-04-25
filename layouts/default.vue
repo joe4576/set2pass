@@ -27,7 +27,7 @@
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+        <v-icon>mdi-{{ `chevron-${miniVariant ? "right" : "left"}` }}</v-icon>
       </v-btn>
       <v-btn icon @click.stop="clipped = !clipped">
         <v-icon>mdi-application</v-icon>
@@ -62,31 +62,41 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  name: 'DefaultLayout',
-  data() {
+<script lang="ts">
+import { defineComponent, ref } from "@nuxtjs/composition-api"
+
+export default defineComponent({
+  setup() {
+    const clipped = ref(false)
+    const drawer = ref(false)
+    const fixed = ref(false)
+    const items = [
+      {
+        icon: "mdi-apps",
+        title: "Welcome",
+        to: "/",
+      },
+      {
+        icon: "mdi-chart-bubble",
+        title: "Inspire",
+        to: "/inspire",
+      },
+    ]
+    const miniVariant = ref(false)
+    const right = ref(false)
+    const rightDrawer = ref(false)
+    const title = "Vuetify.js"
+
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
+      clipped,
+      drawer,
+      fixed,
+      items,
+      miniVariant,
+      right,
+      rightDrawer,
+      title,
     }
   },
-}
+})
 </script>
