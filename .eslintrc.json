@@ -17,5 +17,11 @@
     "sourceType": "module"
   },
   "plugins": ["vue", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "vue/no-unused-vars": "warn",
+    // vue 3 allows multiple roots
+    // note: anything in /pages directly has to have a
+    // single route
+    "vue/no-multiple-template-root": "off"
+  }
 }

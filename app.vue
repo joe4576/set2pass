@@ -1,5 +1,8 @@
 <template>
-  <v-container>
-    <v-row class="justify-center"><v-col cols="auto"> Hello </v-col></v-row>
-  </v-container>
+  <v-app>
+    <app-bar />
+    <v-main>
+      <nuxt-page />
+    </v-main>
+  </v-app>
 </template>
