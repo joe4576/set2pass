@@ -2,7 +2,6 @@
 import { useDisplay } from "vuetify";
 
 const showParallax = ref(true);
-
 const { smAndDown } = useDisplay();
 
 const updateShowParallax = () => {
@@ -29,24 +28,61 @@ onMounted(updateShowParallax);
         <div class="mobile-wrapper">
           <div class="mobile-text-container">
             <v-img src="/img/set2pass.png" width="300px" eager />
-            <h3 class="mt-4">Driving School</h3>
-            <p>Learn fast and drive safe with SET2PASS</p>
+            <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
+            <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
           </div>
         </div>
       </v-img>
     </template>
 
-    <v-container>
-      <v-row>
-        <v-col cols="12">Hello</v-col>
+    <hero-base color="secondary">
+      <v-row class="justify-space-between my-1 mx-2 mx-sm-5">
+        <v-col cols="12" md="auto" class="my-auto text-center">
+          <p class="text-h6">
+            Interested in taking lessons? Get yourself booked in today.
+          </p>
+        </v-col>
+        <v-col cols="12" md="auto" class="my-auto text-center">
+          <v-btn color="primary" nuxt to="contact">Book Now</v-btn>
+        </v-col>
       </v-row>
-    </v-container>
+    </hero-base>
+
+    <hero-owner :mobile="!showParallax" class="py-12" />
+
+    <hero-base class="py-8">
+      <v-row class="justify-space-around">
+        <v-col cols="12" sm="6" md="4">
+          <badge image-url="/img/iam-badge.jpeg">
+            IAM member for over 20 years
+          </badge>
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <badge image-url="/img/dvsa-badge.png">
+            DVSA Approved Driving Instructor
+          </badge>
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <badge image-url="/img/pass-plus-badge.png">
+            Registered PassPlus provider
+          </badge>
+        </v-col>
+      </v-row>
+    </hero-base>
+
+    <hero-base
+      container-width="800px"
+      color="background"
+      title="Frequently Asked Questions"
+    >
+      <frequently-asked-questions />
+    </hero-base>
   </div>
 </template>
 
 <style scoped>
 .hero {
-  height: 600px;
+  height: 100vh;
 }
 
 .text-container-image {
@@ -79,6 +115,7 @@ onMounted(updateShowParallax);
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media (max-width: 1264px) {

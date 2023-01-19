@@ -20,16 +20,6 @@ const menuItems: MenuItem[] = [
     icon: "mdi-cash-multiple",
   },
   {
-    text: "Terms",
-    to: "/terms",
-    icon: "mdi-newspaper-variant-outline",
-  },
-  {
-    text: "Contact",
-    to: "/contact",
-    icon: "mdi-phone",
-  },
-  {
     text: "BlackBox",
     to: "/blackbox",
     icon: "mdi-cellphone",
@@ -40,6 +30,17 @@ const menuItems: MenuItem[] = [
         icon: "mdi-calendar-question-outline",
       },
     ],
+  },
+  {
+    text: "Terms",
+    to: "/terms",
+    icon: "mdi-newspaper-variant-outline",
+  },
+
+  {
+    text: "Contact",
+    to: "/contact",
+    icon: "mdi-phone",
   },
 ];
 
@@ -64,15 +65,24 @@ watch(showNavigationDrawer, () => {
 
 watch(mdAndUp, updateShowFullMenu);
 onMounted(updateShowFullMenu);
+
+defineEmits<{
+  (e: "loaded"): void;
+}>();
 </script>
 
 <template>
   <v-app-bar>
-    <v-container>
+    <v-container class="max-width">
       <v-row class="align-center">
         <v-col cols="auto">
           <nuxt-link to="/">
-            <v-img src="/img/set2pass.png" width="175px" eager />
+            <v-img
+              src="/img/set2pass.png"
+              width="175px"
+              eager
+              @load="$emit('loaded')"
+            />
           </nuxt-link>
         </v-col>
         <v-spacer />
