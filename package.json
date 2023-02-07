@@ -7,7 +7,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "check:eslint": "eslint './'",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "serve": "npx firebase serve",
+    "deploy": "npx firebase deploy"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
