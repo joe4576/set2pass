@@ -10,7 +10,7 @@ defineProps<{
       <v-col cols="12" md="auto" class="d-flex align-center justify-center">
         <div class="pt-2">
           <v-img
-            src="/img/nikki.jpeg"
+            src="/img/nikki.webp"
             width="150px"
             class="mx-auto nikki mb-3"
             eager

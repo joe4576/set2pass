@@ -78,7 +78,7 @@ defineEmits<{
         <v-col cols="auto">
           <nuxt-link to="/">
             <v-img
-              src="/img/set2pass.png"
+              src="/img/set2pass.webp"
               width="175px"
               eager
               @load="$emit('loaded')"
