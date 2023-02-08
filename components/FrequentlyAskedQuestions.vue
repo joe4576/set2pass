@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { RouteLocationRaw } from "vue-router";
+
 interface Faq {
   title: string;
   content: string;
   icon: string;
   buttonText?: string;
-  buttonHref?: string;
+  buttonLocation?: string | RouteLocationRaw;
 }
 
 const faqs: Faq[] = [
@@ -44,7 +46,10 @@ const faqs: Faq[] = [
     title: "What is the Theory Test Pro app?",
     content: "The Theory Test Pro app is....",
     buttonText: "Find out more",
-    buttonHref: "how-to-start",
+    buttonLocation: {
+      name: "how-to-start",
+      hash: "#theory-test-pro",
+    },
     icon: "mdi-cellphone",
   },
 ];
@@ -69,12 +74,17 @@ const faqs: Faq[] = [
         >
           {{ line }}
         </p>
-        <template v-if="faq.buttonText && faq.buttonHref">
+        <template v-if="faq.buttonText && faq.buttonLocation">
           <v-divider class="my-4" />
           <v-row>
             <v-spacer />
             <v-col cols="auto">
-              <v-btn color="primary" nuxt :to="faq.buttonHref" variant="text">
+              <v-btn
+                color="primary"
+                nuxt
+                :to="faq.buttonLocation"
+                variant="text"
+              >
                 {{ faq.buttonText }}
               </v-btn>
             </v-col>
