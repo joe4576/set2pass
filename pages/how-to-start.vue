@@ -90,7 +90,5 @@ const timelineItems: TimelineItem[] = [
     </v-timeline>
   </hero-base>
 
-  <hero-theory-test-pro />
-
   <hero-book-now />
 </template>
