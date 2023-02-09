@@ -5,48 +5,39 @@
 
   <hero-base color="background" class="py-12">
     <div class="d-flex justify-center">
-      <v-card width="500px" elevation="4" class="px-5">
-        <v-card-text class="my-10">
-          <v-row class="justify-center">
-            <v-col cols="auto">
-              <v-img src="/icon/pricing-icon.svg" eager width="100px" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="auto" class="text-center">
-              <h2 class="text-h4">Manual and Automatic Lessons</h2>
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="auto" class="text-center">
-              <p class="text-body-1">
-                To provide the maximum benefit to our students, we always
-                recommend 90-minute lessons
-              </p>
-            </v-col>
-          </v-row>
-          <v-row class="justify-center">
-            <v-col cols="auto">
-              <span class="text-h2 font-weight-bold">£60</span>
-              <span class="text-body-2"> /90 mins</span>
-            </v-col>
-          </v-row>
-          <v-row class="justify-center">
-            <v-col cols="auto">
-              <span class="text-body-2">or </span>
-              <span class="text-body-2 font-weight-bold">£40</span>
-              <span class="text-body-2">/hour</span>
-            </v-col>
-          </v-row>
-          <v-row class="justify-center">
-            <v-col cols="auto">
-              <v-btn color="primary" width="275px" nuxt to="contact">
-                Book now
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+      <icon-card
+        icon-url="/icon/pricing-icon.svg"
+        title="Manual and Automatic Lessons"
+      >
+        <v-row>
+          <v-col cols="auto" class="text-center">
+            <p class="text-body-1">
+              To provide the maximum benefit to our students, we always
+              recommend 90-minute lessons
+            </p>
+          </v-col>
+        </v-row>
+        <v-row class="justify-center">
+          <v-col cols="auto">
+            <span class="text-h2 font-weight-bold">£60</span>
+            <span class="text-body-2"> /90 mins</span>
+          </v-col>
+        </v-row>
+        <v-row class="justify-center">
+          <v-col cols="auto">
+            <span class="text-body-2">or </span>
+            <span class="text-body-2 font-weight-bold">£40</span>
+            <span class="text-body-2">/hour</span>
+          </v-col>
+        </v-row>
+        <v-row class="justify-center">
+          <v-col cols="auto">
+            <v-btn color="primary" width="275px" nuxt to="contact">
+              Book now
+            </v-btn>
+          </v-col>
+        </v-row>
+      </icon-card>
     </div>
   </hero-base>
 
