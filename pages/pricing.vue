@@ -41,9 +41,13 @@
     </div>
   </hero-base>
 
-  <hero-base title="Gift vouchers now available!" class="pb-10">
+  <hero-base
+    id="gift-voucher"
+    title="Gift vouchers now available!"
+    class="pb-10"
+  >
     <v-row class="justify-center">
-      <v-col cols="auto">
+      <v-col cols="12" sm="8" md="auto" class="d-flex align-end my-auto">
         <v-img
           class="gift-voucher"
           src="/img/gift-voucher.webp"
@@ -51,13 +55,20 @@
           eager
         />
       </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" class="text-center">
+      <v-col cols="12" sm="4" class="my-auto">
         <p class="text-body-1">
-          To find out more information, please
-          <nuxt-link to="contact"> contact us </nuxt-link>
+          We now offer gift vouchers, which are available to purchase from your
+          instructor.
         </p>
+        <p class="text-body-1">To find out more, please get in touch.</p>
+        <v-btn
+          nuxt
+          to="contact"
+          color="primary"
+          :block="$vuetify.display.smAndDown"
+        >
+          Contact us
+        </v-btn>
       </v-col>
     </v-row>
   </hero-base>
@@ -67,5 +78,9 @@
 .gift-voucher {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#gift-voucher p {
+  margin: 1rem auto;
 }
 </style>
