@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify/lib/framework.mjs";
+import { BackgroundTypeProps } from "~~/components/hero/base/HeroBase.vue";
 
 const { smAndDown } = useDisplay();
 const hasMounted = ref(false);
 
-defineProps<{
+interface HeroPageBannerProps extends BackgroundTypeProps {
   title: string;
-}>();
+}
+
+defineProps<HeroPageBannerProps>();
 
 onMounted(() => {
   hasMounted.value = true;
@@ -16,7 +19,7 @@ onMounted(() => {
 <template>
   <hero-base
     v-if="hasMounted"
-    :height="smAndDown ? '200px' : '350px'"
+    :height="smAndDown ? '200px' : '250px'"
     :background-type="'green-gradient'"
   >
     <v-row class="align-center" style="height: 100%" no-gutters>

@@ -12,8 +12,13 @@ interface Faq {
 const faqs: Faq[] = [
   {
     title: "How much do lessons cost?",
-    content: "idk, ill need to check",
+    content:
+      "Check out pricing page to get the latest prices that we offer for driving lessons",
     icon: "mdi-currency-usd",
+    buttonLocation: {
+      name: "pricing",
+    },
+    buttonText: "View pricing",
   },
   {
     title: "Do you offer automatic lessons?",

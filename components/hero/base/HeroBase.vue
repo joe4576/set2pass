@@ -1,11 +1,19 @@
 <script setup lang="ts">
-export type BackgroundType = "green-gradient" | "orange-gradient";
+export type BackgroundType =
+  | "green-gradient"
+  | "orange-gradient"
+  | "green-gradient-1";
 
-defineProps<{
+export interface BackgroundTypeProps {
+  backgroundType?: BackgroundType;
+}
+
+interface HeroBaseProps extends BackgroundTypeProps {
   containerWidth?: string;
   title?: string;
-  backgroundType?: BackgroundType;
-}>();
+}
+
+defineProps<HeroBaseProps>();
 </script>
 
 <template>
@@ -27,6 +35,11 @@ defineProps<{
 .green-gradient {
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+.green-gradient-1 {
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af5d7 100%);
 }
 
 .orange-gradient {
