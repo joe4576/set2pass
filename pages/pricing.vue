@@ -50,7 +50,7 @@
     </div>
   </hero-base>
 
-  <hero-base title="Gift vouchers now available!">
+  <hero-base title="Gift vouchers now available!" class="pb-10">
     <v-row class="justify-center">
       <v-col cols="auto">
         <v-img

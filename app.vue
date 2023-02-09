@@ -8,6 +8,7 @@ const appBarHasLoaded = ref(false);
     <v-main>
       <nuxt-page />
     </v-main>
+    <app-footer />
   </v-app>
 </template>
 

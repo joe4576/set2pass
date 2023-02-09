@@ -11,13 +11,19 @@ export interface BackgroundTypeProps {
 interface HeroBaseProps extends BackgroundTypeProps {
   containerWidth?: string;
   title?: string;
+  fullHeight?: boolean;
 }
 
 defineProps<HeroBaseProps>();
 </script>
 
 <template>
-  <v-sheet v-bind="$attrs" width="100vw" :class="backgroundType">
+  <v-sheet
+    v-bind="$attrs"
+    width="100vw"
+    :height="fullHeight ? '100%' : 'auto'"
+    :class="backgroundType"
+  >
     <v-container
       class="max-width"
       :style="{

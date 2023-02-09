@@ -13,60 +13,62 @@ onMounted(updateShowParallax);
 </script>
 
 <template>
-  <div style="height: 300vh">
-    <template v-if="showParallax">
-      <v-parallax class="hero" src="/img/index-hero.webp">
-        <div class="text-container">
-          <v-img class="text-container-image" src="/img/set2pass.webp" eager />
-          <h3>Driving School</h3>
-          <p>Learn fast and drive safe with SET2PASS</p>
+  <template v-if="showParallax">
+    <v-parallax class="hero" src="/img/index-hero.webp">
+      <div class="text-container">
+        <v-img class="text-container-image" src="/img/set2pass.webp" eager />
+        <h3>Driving School</h3>
+        <p>Learn fast and drive safe with SET2PASS</p>
+      </div>
+    </v-parallax>
+  </template>
+  <template v-else>
+    <v-img src="/img/index-hero.webp" width="100vw" eager>
+      <div class="mobile-wrapper">
+        <div class="mobile-text-container">
+          <v-img src="/img/set2pass.webp" width="300px" eager />
+          <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
+          <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
         </div>
-      </v-parallax>
-    </template>
-    <template v-else>
-      <v-img src="/img/index-hero.webp" width="100vw" eager>
-        <div class="mobile-wrapper">
-          <div class="mobile-text-container">
-            <v-img src="/img/set2pass.webp" width="300px" eager />
-            <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
-            <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
-          </div>
-        </div>
-      </v-img>
-    </template>
+      </div>
+    </v-img>
+  </template>
 
-    <hero-book-now />
+  <hero-book-now />
 
-    <hero-owner :mobile="!showParallax" class="py-12" />
+  <hero-owner :mobile="!showParallax" class="py-12" />
 
-    <hero-base class="py-8">
-      <v-row class="justify-space-around">
-        <v-col cols="12" sm="6" md="4">
-          <badge image-url="/img/iam-badge.webp">
-            IAM member for over 20 years
-          </badge>
-        </v-col>
-        <v-col cols="12" sm="6" md="4">
-          <badge image-url="/img/dvsa-badge.webp">
-            DVSA Approved Driving Instructor
-          </badge>
-        </v-col>
-        <v-col cols="12" sm="6" md="4">
-          <badge image-url="/img/pass-plus-badge.webp">
-            Registered PassPlus provider
-          </badge>
-        </v-col>
-      </v-row>
-    </hero-base>
+  <hero-base class="py-8">
+    <v-row class="justify-space-around">
+      <v-col cols="12" sm="6" md="4">
+        <badge image-url="/img/iam-badge.webp">
+          IAM member for over 20 years
+        </badge>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <badge image-url="/img/dvsa-badge.webp">
+          DVSA Approved Driving Instructor
+        </badge>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <badge image-url="/img/pass-plus-badge.webp">
+          Registered PassPlus provider
+        </badge>
+      </v-col>
+    </v-row>
+  </hero-base>
 
-    <hero-base
-      container-width="800px"
-      color="background"
-      title="Frequently Asked Questions"
-    >
-      <frequently-asked-questions />
-    </hero-base>
-  </div>
+  <hero-base
+    id="faqs"
+    class="pb-10"
+    container-width="800px"
+    color="background"
+    title="Frequently Asked Questions"
+  >
+    <frequently-asked-questions />
+  </hero-base>
+
+  <hero-theory-test-pro />
 </template>
 
 <style scoped>
