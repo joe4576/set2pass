@@ -5,8 +5,8 @@
 
   <hero-base color="background" class="py-12">
     <div class="d-flex justify-center">
-      <v-card width="500px" elevation="4">
-        <v-card-text class="my-10">
+      <v-card width="500px" elevation="4" class="px-2">
+        <v-card-text class="my-10 px-5">
           <v-row class="justify-center">
             <v-col cols="auto">
               <v-img src="/icon/pricing-icon.svg" eager width="100px" />
