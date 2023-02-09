@@ -57,6 +57,7 @@
           class="gift-voucher"
           src="/img/gift-voucher.webp"
           width="500px"
+          eager
         />
       </v-col>
     </v-row>
