@@ -32,9 +32,9 @@ const timelineItems: TimelineItem[] = [
   },
   {
     title: "Prepare for your Theory Test",
-    body: "Preparation for your theory test can begin as early as you'd like! Your instructor will also advise you when they think you should start to prepare",
-    href: "#theory-test-pro",
-    target: "_self",
+    body: "Preparation for your theory test can begin as early as you'd like! Your instructor will also advise you when they think you should start to prepare. We also offer a free Theory Test Pro subscription to all of our students.",
+    href: "https://www.gov.uk/learn-to-drive-a-car#prepare-for-your-theory-test",
+    buttonText: "How to prepare",
   },
   {
     title: "Book your Theory Test",
@@ -91,31 +91,6 @@ const timelineItems: TimelineItem[] = [
   </hero-base>
 
   <hero-theory-test-pro />
-
-  <hero-base
-    title="Get ready for your Theory Test"
-    container-width="750px"
-    class="pb-12 py-1"
-  >
-    <v-row>
-      <v-col cols="12">
-        <p class="text-body-1">
-          Visit the
-          <a
-            href="https://www.gov.uk/learn-to-drive-a-car#prepare-for-your-theory-test"
-            target="_blank"
-            >government website</a
-          >
-          to get official information about your driving theory test and advice
-          on how to prepare.
-        </p>
-        <br />
-        <p class="text-body-1">
-          Please ask your instructor if you have any questions!
-        </p>
-      </v-col>
-    </v-row>
-  </hero-base>
 
   <hero-book-now />
 </template>
