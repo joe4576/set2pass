@@ -6,7 +6,7 @@
       <v-row class="pt-10 pb-8">
         <v-col cols="12" sm="4">
           <nuxt-link to="/">
-            <v-img src="/img/set2pass.webp" width="175px" eager />
+            <img src="/img/set2pass.webp" style="width: 175px" />
           </nuxt-link>
           <p class="text-body-1 mt-3 pl-1 text-blue-grey-lighten-3">
             Driving School

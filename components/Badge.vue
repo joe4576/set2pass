@@ -5,8 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <v-img :src="imageUrl" height="100px" eager />
-  <p class="text-center font-weight-bold mt-5">
-    <slot />
-  </p>
+  <div class="d-flex flex-column align-center">
+    <img :src="imageUrl" style="width: 100px" />
+    <p class="text-center font-weight-bold mt-5">
+      <slot />
+    </p>
+  </div>
 </template>

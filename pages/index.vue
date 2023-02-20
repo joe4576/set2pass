@@ -16,22 +16,21 @@ onMounted(updateShowParallax);
   <template v-if="showParallax">
     <v-parallax class="hero" src="/img/index-hero.webp">
       <div class="text-container">
-        <v-img class="text-container-image" src="/img/set2pass.webp" eager />
+        <img class="text-container-image" src="/img/set2pass.webp" />
         <h3>Driving School</h3>
         <p>Learn fast and drive safe with SET2PASS</p>
       </div>
     </v-parallax>
   </template>
   <template v-else>
-    <v-img src="/img/index-hero.webp" width="100vw" eager>
-      <div class="mobile-wrapper">
-        <div class="mobile-text-container">
-          <v-img src="/img/set2pass.webp" width="300px" eager />
-          <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
-          <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
-        </div>
+    <div class="mobile-header-wrapper">
+      <div class="mobile-background-image" />
+      <div class="mobile-header-content">
+        <img class="text-container-image" src="/img/set2pass.webp" />
+        <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
+        <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
       </div>
-    </v-img>
+    </div>
   </template>
 
   <hero-book-now />
@@ -77,7 +76,7 @@ onMounted(updateShowParallax);
           href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
           target="_blank"
         >
-          <v-img src="/img/freeindex.webp" width="100px" eager />
+          <img src="/img/freeindex.webp" style="width: 100px" />
         </a>
       </v-col>
       <v-col cols="auto">
@@ -111,23 +110,35 @@ onMounted(updateShowParallax);
   padding: 0.5rem;
 }
 
-.mobile-wrapper {
-  display: flex;
+.mobile-background-image {
   height: 100%;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("/img/index-hero.webp");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
-.mobile-text-container {
+.mobile-header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.mobile-header-wrapper {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
 }
 
 @media (max-width: 1264px) {

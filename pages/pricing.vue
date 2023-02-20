@@ -42,18 +42,13 @@
   </hero-base>
 
   <hero-base
-    id="gift-voucher"
+    id="gift-voucher-container"
     title="Gift vouchers now available!"
     class="pb-10"
   >
     <v-row class="justify-center">
-      <v-col cols="12" sm="8" md="auto" class="d-flex align-end my-auto">
-        <v-img
-          class="gift-voucher"
-          src="/img/gift-voucher.webp"
-          width="500px"
-          eager
-        />
+      <v-col cols="12" sm="8" class="d-flex justify-center my-auto">
+        <img class="gift-voucher" src="/img/gift-voucher.webp" />
       </v-col>
       <v-col cols="12" sm="4" class="my-auto">
         <p class="text-body-1">
@@ -78,9 +73,11 @@
 .gift-voucher {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  max-width: 100%;
+  max-height: 300px;
 }
 
-#gift-voucher p {
+#gift-voucher-container p {
   margin: 1rem auto;
 }
 </style>

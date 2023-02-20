@@ -1,8 +1,10 @@
 <script setup lang="ts">
-defineProps<{
+export interface TestimonialCardProps {
   imageUrl: string;
   name: string;
-}>();
+}
+
+defineProps<TestimonialCardProps>();
 </script>
 
 <template>
@@ -11,7 +13,7 @@ defineProps<{
       <v-container>
         <v-row>
           <v-col cols="12">
-            <v-img class="mb-3" src="/icon/quote-icon.svg" width="35px" eager />
+            <img class="mb-3" src="/icon/quote-icon.svg" style="width: 35px" />
             <p class="text-body-1 font-italic">
               <slot />
             </p>
@@ -19,7 +21,7 @@ defineProps<{
         </v-row>
         <v-row class="align-center">
           <v-col class="pr-0" cols="auto">
-            <v-img class="picture" :src="imageUrl" width="80px" />
+            <img class="picture" :src="imageUrl" />
           </v-col>
           <v-col cols="auto">
             <p class="text-body-2">
@@ -35,5 +37,6 @@ defineProps<{
 <style scoped>
 .picture {
   border-radius: 100%;
+  width: 80px;
 }
 </style>

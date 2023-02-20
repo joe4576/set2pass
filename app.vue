@@ -1,10 +1,8 @@
-<script setup lang="ts">
-const appBarHasLoaded = ref(false);
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <v-app v-show="appBarHasLoaded">
-    <app-bar @loaded="appBarHasLoaded = true" />
+  <v-app>
+    <app-bar />
     <v-main>
       <nuxt-page />
     </v-main>

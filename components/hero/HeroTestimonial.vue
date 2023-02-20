@@ -1,7 +1,7 @@
 <script setup lang="ts">
-interface Testimonial {
-  name: string;
-  imageUrl: string;
+import { TestimonialCardProps } from "@/components/TestimonialCard.vue";
+
+interface Testimonial extends TestimonialCardProps {
   text: string;
 }
 

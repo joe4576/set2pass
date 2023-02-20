@@ -9,8 +9,8 @@ defineProps<{
   <v-card width="500px" elevation="4" class="px-5">
     <v-card-text class="my-10">
       <v-row class="justify-center">
-        <v-col cols="auto">
-          <v-img :src="iconUrl" eager width="100px" />
+        <v-col cols="12" class="d-flex justify-center">
+          <img :src="iconUrl" style="width: 100px" />
         </v-col>
       </v-row>
       <v-row v-if="title" class="justify-center">

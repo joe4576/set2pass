@@ -8,13 +8,8 @@ defineProps<{
   <hero-base color="background" v-bind="$attrs">
     <v-row>
       <v-col cols="12" md="auto" class="d-flex align-center justify-center">
-        <div class="pt-2">
-          <v-img
-            src="/img/nikki.webp"
-            width="150px"
-            class="mx-auto nikki mb-3"
-            eager
-          />
+        <div class="pt-2 d-flex justify-center flex-column">
+          <img src="/img/nikki.webp" class="nikki" />
           <p class="text-subtitle-1 font-weight-bold mb-0">
             Nikki Brown - Owner
           </p>
@@ -54,6 +49,8 @@ defineProps<{
 .nikki {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
+  width: 150px;
+  margin: 0 auto;
 }
 
 p {

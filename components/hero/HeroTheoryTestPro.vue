@@ -17,16 +17,21 @@
           app. Ask your instructor for more information.
         </p>
       </v-col>
-      <v-col class="my-auto" cols="12" sm="3">
+      <v-col class="d-flex justify-center align-center" cols="12" sm="3">
         <a href="https://www.theorytestpro.co.uk/" target="_blank">
-          <v-img
-            class="mx-auto"
+          <img
+            class="theory-test-pro-logo"
             src="/img/theory-test-pro-logo.webp"
-            width="150px"
-            eager
           />
         </a>
       </v-col>
     </v-row>
   </hero-base>
 </template>
+
+<style scoped>
+.theory-test-pro-logo {
+  width: 150px;
+  display: block;
+}
+</style>

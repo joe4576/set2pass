@@ -65,10 +65,6 @@ watch(showNavigationDrawer, () => {
 
 watch(mdAndUp, updateShowFullMenu);
 onMounted(updateShowFullMenu);
-
-defineEmits<{
-  (e: "loaded"): void;
-}>();
 </script>
 
 <template>
@@ -76,13 +72,8 @@ defineEmits<{
     <v-container class="max-width">
       <v-row class="align-center">
         <v-col cols="auto">
-          <nuxt-link to="/">
-            <v-img
-              src="/img/set2pass.webp"
-              width="175px"
-              eager
-              @load="$emit('loaded')"
-            />
+          <nuxt-link to="/" class="d-flex">
+            <img src="/img/set2pass.webp" style="width: 175px" />
           </nuxt-link>
         </v-col>
         <v-spacer />

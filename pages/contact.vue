@@ -7,7 +7,7 @@
       <icon-card icon-url="/icon/speech-bubble-icon.svg" title="Get in touch">
         <v-row class="pt-4">
           <v-col cols="auto">
-            <v-img src="/icon/facebook-icon.svg" width="33px" eager></v-img>
+            <img src="/icon/facebook-icon.svg" style="width: 33px" />
           </v-col>
           <v-col cols="auto" class="text-h6">
             <a href="https://www.facebook.com/Set2Pass/"
