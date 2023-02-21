@@ -1,7 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const vueHasHydrated = ref(false);
+
+onMounted(() => {
+  vueHasHydrated.value = true;
+});
+</script>
 
 <template>
-  <v-app>
+  <v-app v-show="vueHasHydrated">
     <app-bar />
     <v-main>
       <nuxt-page />
