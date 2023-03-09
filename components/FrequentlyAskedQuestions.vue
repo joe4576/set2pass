@@ -55,7 +55,7 @@ const faqs: Faq[] = [
 </script>
 
 <template>
-  <v-container>
+  <v-container class="pb-0">
     <v-row>
       <v-col cols="12" md="7">
         <v-card elevation="4">
@@ -91,7 +91,7 @@ const faqs: Faq[] = [
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" md="5" class="d-flex justify-center">
+      <v-col cols="12" md="5" class="d-flex justify-center mt-8">
         <img
           src="/icon/question-icon.svg"
           alt="Question Mark Icon"
