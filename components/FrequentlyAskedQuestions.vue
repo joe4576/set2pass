@@ -76,6 +76,8 @@ const faqs: Faq[] = [
                 :class="{
                   // don't remove padding if button is last faq
                   'py-0': i !== faqs.length - 1,
+                  'd-flex': $vuetify.display.xs,
+                  'justify-center': $vuetify.display.xs,
                 }"
               >
                 <v-btn
