@@ -46,56 +46,58 @@ const faqs: Faq[] = [
     title: "Can I book multiple lessons at once?",
     content: "Yes, you can buy lessons in bulk",
     icon: "mdi-bookmark-outline",
-  },
-  {
-    title: "What is the Theory Test Pro app?",
-    content: "The Theory Test Pro app is....",
-    buttonText: "Find out more",
+    buttonText: "Contact us now",
     buttonLocation: {
-      name: "how-to-start",
-      hash: "#theory-test-pro",
+      name: "contact",
     },
-    icon: "mdi-cellphone",
   },
 ];
 </script>
 
 <template>
-  <v-expansion-panels multiple class="px-1">
-    <v-expansion-panel v-for="faq in faqs" :key="faq.title" elevation="5">
-      <v-expansion-panel-title>
-        <p class="text-body-1">
-          <v-icon v-if="faq.icon" class="mr-2 ml-n2" color="primary">
-            {{ faq.icon }}
-          </v-icon>
-          {{ faq.title }}
-        </p>
-      </v-expansion-panel-title>
-      <v-expansion-panel-text>
-        <p
-          v-for="(line, idx) in faq.content.split('\n')"
-          :key="idx"
-          class="text-body-1"
-        >
-          {{ line }}
-        </p>
-        <template v-if="faq.buttonText && faq.buttonLocation">
-          <v-divider class="my-4" />
-          <v-row>
-            <v-spacer />
-            <v-col cols="auto">
-              <v-btn
-                color="primary"
-                nuxt
-                :to="faq.buttonLocation"
-                variant="text"
+  <v-container>
+    <v-row>
+      <v-col cols="12" md="7">
+        <v-card elevation="4">
+          <v-card-text>
+            <v-row v-for="(faq, i) in faqs" :key="faq.title">
+              <v-col cols="12" class="pb-0">
+                <h5 class="text-h5">
+                  {{ faq.title }}
+                </h5>
+              </v-col>
+              <v-col cols="12" class="pt-0">
+                <p class="text-body-1">
+                  {{ faq.content }}
+                </p>
+              </v-col>
+              <v-col
+                v-if="faq.buttonLocation && faq.buttonText"
+                :class="{
+                  // don't remove padding if button is last faq
+                  'py-0': i !== faqs.length - 1,
+                }"
               >
-                {{ faq.buttonText }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </template>
-      </v-expansion-panel-text>
-    </v-expansion-panel>
-  </v-expansion-panels>
+                <v-btn
+                  color="primary"
+                  nuxt
+                  :to="faq.buttonLocation"
+                  variant="text"
+                >
+                  {{ faq.buttonText }}
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="5" class="d-flex justify-center">
+        <img
+          src="/icon/question-icon.svg"
+          alt="Question Mark Icon"
+          style="width: 335px"
+        />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>

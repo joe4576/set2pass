@@ -60,7 +60,6 @@ onMounted(updateShowParallax);
   <hero-base
     id="faqs"
     class="pb-10"
-    container-width="800px"
     color="background"
     title="Frequently Asked Questions"
   >
