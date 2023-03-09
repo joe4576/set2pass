@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <hero-page-banner title="Pricing" :background-type="'green-gradient-1'" />
+  <hero-page-banner title="Pricing" />
 
   <hero-base color="background" class="py-12">
     <div class="d-flex justify-center">
