@@ -19,15 +19,15 @@
         </v-row>
         <v-row class="justify-center">
           <v-col cols="auto">
-            <span class="text-h2 font-weight-bold">£60</span>
-            <span class="text-body-2"> /90 mins</span>
+            <span class="text-h2 font-weight-bold">£40</span>
+            <span class="text-body-2"> /hour</span>
           </v-col>
         </v-row>
         <v-row class="justify-center">
           <v-col cols="auto">
             <span class="text-body-2">or </span>
-            <span class="text-body-2 font-weight-bold">£40</span>
-            <span class="text-body-2">/hour</span>
+            <span class="text-body-2 font-weight-bold">£60</span>
+            <span class="text-body-2"> /90 mins</span>
           </v-col>
         </v-row>
         <v-row class="justify-center">
