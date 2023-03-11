@@ -13,7 +13,7 @@ const faqs: Faq[] = [
   {
     title: "How much do lessons cost?",
     content:
-      "Check out pricing page to get the latest prices that we offer for driving lessons",
+      "Lessons are £40/hour. I teach 90 minute lessons, so that will be £60 per lesson.",
     icon: "mdi-currency-usd",
     buttonLocation: {
       name: "pricing",
@@ -22,29 +22,23 @@ const faqs: Faq[] = [
   },
   {
     title: "Do you offer automatic lessons?",
-    content: "Yes, we offer both manual and automatic lessons.\nHello :)",
+    content: "Yes. I offer automatic and manual lessons.",
     icon: "mdi-car",
   },
   {
     title: "Which areas do you cover?",
-    content: "We currently cover the Locks Heath and park gate areas.",
+    content: "Locks Heath and surrounding areas.",
     icon: "mdi-map-marker",
   },
   {
     title: "How long is your waiting list?",
-    content: `It varies, but typically you will be on the waiting list for a few months.\n
-      You will remain on my books and I will contact you as soon as I have an availability`,
+    content: "My waiting list is typically 4-6 months.",
     icon: "mdi-calendar",
   },
   {
-    title: "How long are the lessons?",
-    content:
-      "Each lesson is 90 minutes long.\nI have found that this is the optimimal time for students",
-    icon: "mdi-clock-outline",
-  },
-  {
     title: "Can I book multiple lessons at once?",
-    content: "Yes, you can buy lessons in bulk",
+    content:
+      "Yes. I offer a 5% discount if you book 10 90 minute lessons in advanced.",
     icon: "mdi-bookmark-outline",
     buttonText: "Contact us now",
     buttonLocation: {
@@ -70,24 +64,6 @@ const faqs: Faq[] = [
                 <p class="text-body-1">
                   {{ faq.content }}
                 </p>
-              </v-col>
-              <v-col
-                v-if="faq.buttonLocation && faq.buttonText"
-                :class="{
-                  // don't remove padding if button is last faq
-                  'py-0': i !== faqs.length - 1,
-                  'd-flex': $vuetify.display.xs,
-                  'justify-center': $vuetify.display.xs,
-                }"
-              >
-                <v-btn
-                  color="primary"
-                  nuxt
-                  :to="faq.buttonLocation"
-                  variant="text"
-                >
-                  {{ faq.buttonText }}
-                </v-btn>
               </v-col>
             </v-row>
           </v-card-text>
