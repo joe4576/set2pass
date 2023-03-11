@@ -58,15 +58,11 @@ const testimonials: Testimonial[] = [
 <style scoped>
 .card-container {
   column-count: 3;
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
 }
 
 @media (max-width: 1200px) {
   .card-container {
     column-count: 2;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
     max-width: 740px;
     margin: 0 auto;
   }
@@ -74,8 +70,6 @@ const testimonials: Testimonial[] = [
 @media (max-width: 800px) {
   .card-container {
     column-count: 1;
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
   }
 }
 
