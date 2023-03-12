@@ -45,10 +45,12 @@
               <p class="text-body-1 font-weight-bold">Blackbox</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
-                  <nuxt-link to="contact">About</nuxt-link>
+                  <nuxt-link to="blackbox">About</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="terms">Priacy Policy</nuxt-link>
+                  <nuxt-link to="blackbox/privacy-policy">
+                    Priacy Policy
+                  </nuxt-link>
                 </li>
               </ul>
             </v-col>
