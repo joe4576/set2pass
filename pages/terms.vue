@@ -1,8 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <hero-page-banner title="Terms and Conditions" class="mb-12" />
-  <div class="container">
+  <text-page title="Terms and Conditions">
     <p>
       The following terms and conditions apply to any individual taking driver
       training with Set2Pass Driving School or any of its
@@ -225,28 +224,5 @@
         </a>
       </li>
     </ul>
-  </div>
+  </text-page>
 </template>
-
-<style scoped>
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 12px;
-}
-
-ul {
-  margin-left: 35px;
-}
-
-p {
-  margin-bottom: 12px;
-  /* text-body-1 borrowed from vuetify */
-  font-size: 1rem !important;
-  font-weight: 400;
-  line-height: 1.5rem;
-  letter-spacing: 0.03125em !important;
-  font-family: "Roboto", sans-serif !important;
-  text-transform: none !important;
-}
-</style>
