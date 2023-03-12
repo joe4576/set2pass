@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "BlackBox Privacy Policy | Set2Pass",
+});
+</script>
 
 <template>
   <text-page title="Privacy Policy">

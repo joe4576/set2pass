@@ -49,6 +49,10 @@ const timelineItems: TimelineItem[] = [
     buttonText: "Book now",
   },
 ];
+
+useHead({
+  title: "How to Start | Set2Pass",
+});
 </script>
 
 <template>

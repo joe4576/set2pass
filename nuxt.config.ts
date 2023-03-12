@@ -12,4 +12,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [eslintPlugin()],
   },
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+    },
+  },
 });

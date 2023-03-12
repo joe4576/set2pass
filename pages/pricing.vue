@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "Pricing | Set2Pass",
+});
+</script>
 
 <template>
   <hero-page-banner title="Pricing" />

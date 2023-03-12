@@ -83,6 +83,10 @@ const appIcons: AppIcon[] = [
     text: "BlackBox Demo (free) (Android)",
   },
 ];
+
+useHead({
+  title: "BlackBox | Set2Pass",
+});
 </script>
 
 <template>

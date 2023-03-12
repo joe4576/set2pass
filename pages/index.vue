@@ -3,6 +3,9 @@ import { useDisplay } from "vuetify";
 
 const showParallax = ref(true);
 const { smAndDown } = useDisplay();
+useHead({
+  title: "Set2Pass",
+});
 
 const updateShowParallax = () => {
   showParallax.value = !smAndDown.value;

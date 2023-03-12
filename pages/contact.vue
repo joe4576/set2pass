@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "Contact | Set2Pass",
+});
+</script>
 
 <template>
   <hero-page-banner title="Contact us" />
