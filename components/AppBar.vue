@@ -79,7 +79,12 @@ onMounted(updateShowFullMenu);
         <v-spacer />
         <v-col v-if="showFullMenu" cols="auto">
           <template v-for="(item, i) in menuItems">
-            <v-btn v-if="!item.subMenuItems" :key="item.text" :to="item.to">
+            <v-btn
+              v-if="!item.subMenuItems"
+              :key="item.text"
+              class="mx-1"
+              :to="item.to"
+            >
               {{ item.text }}
             </v-btn>
             <v-menu
