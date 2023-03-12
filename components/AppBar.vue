@@ -120,8 +120,8 @@ onMounted(updateShowFullMenu);
       </v-row>
     </v-container>
   </v-app-bar>
-  <!-- Show bottom navigation draw for mobile view only -->
-  <v-navigation-drawer v-model="showNavigationDrawer" location="bottom">
+  <!-- Show navigation draw for mobile view only -->
+  <v-navigation-drawer v-model="showNavigationDrawer" location="right">
     <v-list>
       <!-- Include a home item, regardless of menuItems -->
       <v-list-item to="/" prepend-icon="mdi-home">Home</v-list-item>
