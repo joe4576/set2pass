@@ -84,8 +84,10 @@ const appIcons: AppIcon[] = [
   },
 ];
 
-useHead({
+useMetadata({
   title: "BlackBox | Set2Pass",
+  description:
+    "BlackBox is an app that monitors your driving style and reports how you drove on a detailed map view.",
 });
 </script>
 

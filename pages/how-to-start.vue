@@ -50,8 +50,10 @@ const timelineItems: TimelineItem[] = [
   },
 ];
 
-useHead({
+useMetadata({
   title: "How to Start | Set2Pass",
+  description:
+    "Learn about the steps you need to take to become a full license holder.",
 });
 </script>
 

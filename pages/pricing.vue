@@ -1,6 +1,8 @@
 <script setup lang="ts">
-useHead({
+useMetadata({
   title: "Pricing | Set2Pass",
+  description:
+    "Check out out current hourly rate for both automatic and manual driving lessons.",
 });
 </script>
 

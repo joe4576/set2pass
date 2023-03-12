@@ -1,6 +1,7 @@
 <script setup lang="ts">
-useHead({
+useMetadata({
   title: "BlackBox Privacy Policy | Set2Pass",
+  description: "BlackBox privacy policy",
 });
 </script>
 

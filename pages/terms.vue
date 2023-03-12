@@ -1,6 +1,7 @@
 <script setup lang="ts">
-useHead({
+useMetadata({
   title: "Terms | Set2Pass",
+  description: "Terms and conditions for learning to drive with Set2Pass.",
 });
 </script>
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
-useHead({
+useMetadata({
   title: "Contact | Set2Pass",
+  description: "Contact us today to enquire about driving lessons",
 });
 </script>
 

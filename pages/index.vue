@@ -3,8 +3,11 @@ import { useDisplay } from "vuetify";
 
 const showParallax = ref(true);
 const { smAndDown } = useDisplay();
-useHead({
+
+useMetadata({
   title: "Set2Pass",
+  description:
+    "Set2Pass is a driving school that covers Locks Heath and the surrounding areas. We offer both automatic and manual driving lessons.",
 });
 
 const updateShowParallax = () => {
