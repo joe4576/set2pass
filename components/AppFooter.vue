@@ -2,7 +2,7 @@
 
 <template>
   <v-footer class="pa-0">
-    <hero-base color="blue-grey-darken-2" full-height>
+    <hero-base color="blue-grey-darken-2" full-height class="pb-4">
       <v-row class="pt-10 pb-8">
         <v-col cols="12" sm="4">
           <nuxt-link to="/">
@@ -74,11 +74,6 @@
           <a href="https://github.com/joe4576" target="_blank"> Joe Brown </a>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col cols="12">
-          <v-divider class="divider" />
-        </v-col>
-      </v-row>
     </hero-base>
   </v-footer>
 </template>
@@ -99,6 +94,6 @@ a {
 }
 
 .divider {
-  background: white;
+  background: #888b8c;
 }
 </style>

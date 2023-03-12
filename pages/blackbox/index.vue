@@ -106,7 +106,7 @@ useMetadata({
   <hero-feature
     v-for="(feature, idx) in features"
     :key="feature.title"
-    class="my-2"
+    class="my-10"
     :image-url="feature.imageUrl"
     color="background"
     :image-position="idx % 2 === 0 ? 'left' : 'right'"
