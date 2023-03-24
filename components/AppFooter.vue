@@ -18,10 +18,10 @@
               <p class="text-body-1 font-weight-bold">Information</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
-                  <nuxt-link to="how-to-start">How to start</nuxt-link>
+                  <nuxt-link to="/how-to-start">How to start</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="pricing">Pricing</nuxt-link>
+                  <nuxt-link to="/pricing">Pricing</nuxt-link>
                 </li>
                 <li>
                   <nuxt-link to="/#faqs">FAQs</nuxt-link>
@@ -33,10 +33,10 @@
               <p class="text-body-1 font-weight-bold">Resources</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
-                  <nuxt-link to="contact">Contact us</nuxt-link>
+                  <nuxt-link to="/contact">Contact us</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="terms">Terms and Conditions</nuxt-link>
+                  <nuxt-link to="/terms">Terms and Conditions</nuxt-link>
                 </li>
               </ul>
             </v-col>
@@ -45,11 +45,11 @@
               <p class="text-body-1 font-weight-bold">Blackbox</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
-                  <nuxt-link to="blackbox">About</nuxt-link>
+                  <nuxt-link to="/blackbox">About</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="blackbox/privacy-policy">
-                    Priacy Policy
+                  <nuxt-link to="/blackbox/privacy-policy">
+                    Privacy Policy
                   </nuxt-link>
                 </li>
               </ul>

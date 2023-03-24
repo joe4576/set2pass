@@ -54,7 +54,7 @@ const faqs: Faq[] = [
       <v-col cols="12" md="7">
         <v-card elevation="4">
           <v-card-text>
-            <v-row v-for="(faq, i) in faqs" :key="faq.title">
+            <v-row v-for="faq in faqs" :key="faq.title">
               <v-col cols="12" class="pb-0">
                 <h5 class="text-h5">
                   {{ faq.title }}

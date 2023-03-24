@@ -9,7 +9,7 @@
         </p>
       </v-col>
       <v-col cols="12" md="auto" class="my-auto text-center">
-        <v-btn color="primary" nuxt to="contact">Book Now</v-btn>
+        <v-btn color="primary" nuxt to="/contact">Book Now</v-btn>
       </v-col>
     </v-row>
   </hero-base>

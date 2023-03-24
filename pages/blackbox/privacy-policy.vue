@@ -6,7 +6,7 @@ useMetadata({
 </script>
 
 <template>
-  <text-page title="Privacy Policy">
+  <text-page title="Privacy Policy" class="mb-12">
     <p class="font-weight-bold">Policy</p>
     <p>
       The BlackBox application, hereinafter referred to as “the Service”, is

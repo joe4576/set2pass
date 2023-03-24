@@ -38,7 +38,7 @@ useMetadata({
         </v-row>
         <v-row class="justify-center">
           <v-col cols="auto">
-            <v-btn color="primary" width="275px" nuxt to="contact">
+            <v-btn color="primary" width="275px" nuxt to="/contact">
               Book now
             </v-btn>
           </v-col>

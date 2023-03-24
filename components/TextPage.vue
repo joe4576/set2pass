@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <hero-page-banner :title="title" class="mb-12" />
-  <div class="container">
+  <div v-bind="$attrs" class="container">
     <slot />
   </div>
 </template>
