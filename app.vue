@@ -1,6 +1,12 @@
 <script setup lang="ts">
 const vueHasHydrated = ref(false);
 
+useHead({
+  htmlAttrs: {
+    lang: "en",
+  },
+});
+
 onMounted(() => {
   vueHasHydrated.value = true;
 });
