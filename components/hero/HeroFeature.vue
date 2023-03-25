@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify/lib/framework.mjs";
-
 interface HeroFeatureProps {
   imageUrl: string;
   imagePosition?: "left" | "right";
 }
 
-const { smAndDown } = useDisplay();
+const { smAndDown, mdAndUp } = useVuetifyBreakpoints();
 
 const props = withDefaults(defineProps<HeroFeatureProps>(), {
   imagePosition: "left",
@@ -30,8 +28,8 @@ const imageColumnOrder = computed((): number => {
       <v-col class="d-flex justify-center flex-column" cols="12" md="7">
         <h3
           :class="{
-            'text-h3': $vuetify.display.mdAndUp,
-            'text-h4': $vuetify.display.smAndDown,
+            'text-h3': mdAndUp,
+            'text-h4': smAndDown,
           }"
           class="mb-4"
         >

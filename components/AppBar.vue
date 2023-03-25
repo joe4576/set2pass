@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify/lib/framework.mjs";
-
 interface MenuItem {
   text: string;
   to: string;
@@ -44,27 +42,14 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-// setting this to true does some weird things with hydration, breaks all other
-// useDisplay() usages with lots of unintelligible errors. leave as false
-const showFullMenu = ref(false);
-const showNavigationDrawer = ref(false);
-const { mdAndUp } = useDisplay();
+const { mdAndUp: showFullMenu } = useVuetifyBreakpoints();
 
-const updateShowFullMenu = () => {
-  showFullMenu.value = mdAndUp.value;
+const showNavigationDrawer = ref(false);
+
+watch(showFullMenu, () => {
   // close the nav draw when changing between breakpoints
   showNavigationDrawer.value = false;
-};
-
-// force close navigation drawer
-watch(showNavigationDrawer, () => {
-  if (mdAndUp.value) {
-    showNavigationDrawer.value = false;
-  }
 });
-
-watch(mdAndUp, updateShowFullMenu);
-onMounted(updateShowFullMenu);
 </script>
 
 <template>
@@ -121,7 +106,11 @@ onMounted(updateShowFullMenu);
     </v-container>
   </v-app-bar>
   <!-- Show navigation draw for mobile view only -->
-  <v-navigation-drawer v-model="showNavigationDrawer" location="right">
+  <v-navigation-drawer
+    v-model="showNavigationDrawer"
+    location="right"
+    disable-resize-watcher
+  >
     <v-list>
       <!-- Include a home item, regardless of menuItems -->
       <v-list-item to="/" prepend-icon="mdi-home">Home</v-list-item>

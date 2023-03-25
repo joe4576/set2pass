@@ -1,25 +1,15 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
-
-const showParallax = ref(true);
-const { smAndDown } = useDisplay();
+const { smAndDown } = useVuetifyBreakpoints();
 
 useMetadata({
   title: "Set2Pass",
   description:
     "Set2Pass is a driving school that covers Locks Heath and the surrounding areas. We offer both automatic and manual driving lessons.",
 });
-
-const updateShowParallax = () => {
-  showParallax.value = !smAndDown.value;
-};
-
-watch(smAndDown, updateShowParallax);
-onMounted(updateShowParallax);
 </script>
 
 <template>
-  <template v-if="showParallax">
+  <template v-if="!smAndDown">
     <v-parallax class="hero" src="/img/index-hero.webp">
       <div class="text-container">
         <img class="text-container-image" src="/img/set2pass.webp" />
@@ -41,7 +31,7 @@ onMounted(updateShowParallax);
 
   <hero-book-now />
 
-  <hero-owner :mobile="!showParallax" class="py-12" />
+  <hero-owner :mobile="smAndDown" class="py-12" />
 
   <hero-base class="py-8">
     <v-row class="justify-space-around">

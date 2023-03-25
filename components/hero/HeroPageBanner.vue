@@ -1,24 +1,17 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify/lib/framework.mjs";
-import { BackgroundTypeProps } from "~~/components/hero/base/HeroBase.vue";
+import { BackgroundTypeProps } from "@/components/hero/base/HeroBase.vue";
 
-const { smAndDown } = useDisplay();
-const hasMounted = ref(false);
+const { smAndDown } = useVuetifyBreakpoints();
 
 interface HeroPageBannerProps extends BackgroundTypeProps {
   title: string;
 }
 
 defineProps<HeroPageBannerProps>();
-
-onMounted(() => {
-  hasMounted.value = true;
-});
 </script>
 
 <template>
   <hero-base
-    v-if="hasMounted"
     :height="smAndDown ? '200px' : '250px'"
     :background-type="'green-gradient'"
   >
