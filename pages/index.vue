@@ -78,6 +78,7 @@ useMetadata({
         <a
           href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
           target="_blank"
+          aria-label="See Set2Pass' other reviews on FreeIndex"
         >
           <img
             src="/img/freeindex.webp"

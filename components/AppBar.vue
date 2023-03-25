@@ -115,7 +115,7 @@ watch(showFullMenu, () => {
     location="right"
     disable-resize-watcher
   >
-    <v-list>
+    <v-list aria-label="Navigate the Set2Pass website">
       <!-- Include a home item, regardless of menuItems -->
       <v-list-item role="option" to="/" prepend-icon="mdi-home">
         Home
