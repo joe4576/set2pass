@@ -12,7 +12,11 @@ useMetadata({
   <template v-if="!smAndDown">
     <v-parallax class="hero" src="/img/index-hero.webp">
       <div class="text-container">
-        <img class="text-container-image" src="/img/set2pass.webp" />
+        <img
+          class="text-container-image"
+          src="/img/set2pass.webp"
+          alt="Set2Pass Logo"
+        />
         <h3>Driving School</h3>
         <p>Learn fast and drive safe with SET2PASS</p>
       </div>
@@ -22,7 +26,11 @@ useMetadata({
     <div class="mobile-header-wrapper">
       <div class="mobile-background-image" />
       <div class="mobile-header-content">
-        <img class="text-container-image" src="/img/set2pass.webp" />
+        <img
+          class="text-container-image"
+          src="/img/set2pass.webp"
+          alt="Set2Pass Logo"
+        />
         <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
         <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
       </div>
@@ -74,7 +82,7 @@ useMetadata({
           <img
             src="/img/freeindex.webp"
             style="width: 100px"
-            class="FreeIndex Logo"
+            alt="FreeIndex Logo"
           />
         </a>
       </v-col>

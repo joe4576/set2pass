@@ -13,7 +13,12 @@ defineProps<TestimonialCardProps>();
       <v-container>
         <v-row>
           <v-col cols="12">
-            <img class="mb-3" src="/icon/quote-icon.svg" style="width: 35px" />
+            <img
+              class="mb-3"
+              src="/icon/quote-icon.svg"
+              style="width: 35px"
+              alt="Speechmark Icon"
+            />
             <p class="text-body-1 font-italic">
               <slot />
             </p>
