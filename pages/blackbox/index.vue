@@ -89,13 +89,15 @@ useMetadata({
   description:
     "BlackBox is an app that monitors your driving style and reports how you drove on a detailed map view.",
 });
+
+const { mdAndUp } = useVuetifyBreakpoints();
 </script>
 
 <template>
   <v-parallax
     class="parallax"
     src="/img/blackbox-0.webp"
-    :height="$vuetify.display.mdAndUp ? 350 : 250"
+    :height="mdAndUp ? 350 : 250"
     :scale="0.6"
   >
     <div class="d-flex fill-height justify-center align-center">

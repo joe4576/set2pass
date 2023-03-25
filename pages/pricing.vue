@@ -4,6 +4,8 @@ useMetadata({
   description:
     "Check out out current hourly rate for both automatic and manual driving lessons.",
 });
+
+const { smAndDown } = useVuetifyBreakpoints();
 </script>
 
 <template>
@@ -62,12 +64,7 @@ useMetadata({
           instructor.
         </p>
         <p class="text-body-1">To find out more, please get in touch.</p>
-        <v-btn
-          nuxt
-          to="contact"
-          color="primary"
-          :block="$vuetify.display.smAndDown"
-        >
+        <v-btn nuxt to="contact" color="primary" :block="smAndDown">
           Contact us
         </v-btn>
       </v-col>
