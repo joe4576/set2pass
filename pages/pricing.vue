@@ -56,7 +56,11 @@ const { smAndDown } = useVuetifyBreakpoints();
   >
     <v-row class="justify-center">
       <v-col cols="12" sm="8" class="d-flex justify-center my-auto">
-        <img class="gift-voucher" src="/img/gift-voucher.webp" />
+        <img
+          class="gift-voucher"
+          src="/img/gift-voucher.webp"
+          alt="Set2Pass Gift Voucher"
+        />
       </v-col>
       <v-col cols="12" sm="4" class="my-auto">
         <p class="text-body-1">

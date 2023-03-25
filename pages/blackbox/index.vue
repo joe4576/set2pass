@@ -131,7 +131,7 @@ const { mdAndUp } = useVuetifyBreakpoints();
           class="logo-col"
         >
           <a :href="icon.href" target="_blank">
-            <img class="logo" :src="icon.imageUrl" />
+            <img class="logo" :src="icon.imageUrl" :alt="`${icon.text} Logo`" />
           </a>
           <p class="text-body-1">{{ icon.text }}</p>
         </v-col>

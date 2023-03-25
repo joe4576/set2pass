@@ -9,7 +9,7 @@ defineProps<{
     <v-row>
       <v-col cols="12" md="auto" class="d-flex align-center justify-center">
         <div class="pt-2 d-flex justify-center flex-column">
-          <img src="/img/nikki.webp" class="nikki" />
+          <img src="/img/nikki.webp" class="nikki" alt="Nikki Brown" />
           <p class="text-subtitle-1 font-weight-bold mb-0">
             Nikki Brown - Owner
           </p>

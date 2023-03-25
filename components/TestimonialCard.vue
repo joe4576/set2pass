@@ -21,7 +21,7 @@ defineProps<TestimonialCardProps>();
         </v-row>
         <v-row class="align-center">
           <v-col class="pr-0" cols="auto">
-            <img class="picture" :src="imageUrl" />
+            <img class="picture" :src="imageUrl" :alt="`${name}`" />
           </v-col>
           <v-col cols="auto">
             <p class="text-body-2">

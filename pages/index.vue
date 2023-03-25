@@ -71,7 +71,11 @@ useMetadata({
           href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
           target="_blank"
         >
-          <img src="/img/freeindex.webp" style="width: 100px" />
+          <img
+            src="/img/freeindex.webp"
+            style="width: 100px"
+            class="FreeIndex Logo"
+          />
         </a>
       </v-col>
       <v-col cols="auto">

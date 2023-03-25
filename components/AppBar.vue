@@ -58,7 +58,11 @@ watch(showFullMenu, () => {
       <v-row class="align-center">
         <v-col cols="auto">
           <nuxt-link to="/" class="d-flex">
-            <img src="/img/set2pass.webp" style="width: 175px" />
+            <img
+              src="/img/set2pass.webp"
+              style="width: 175px"
+              alt="Set2Pass Logo"
+            />
           </nuxt-link>
         </v-col>
         <v-spacer />

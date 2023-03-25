@@ -22,6 +22,7 @@
           <img
             class="theory-test-pro-logo"
             src="/img/theory-test-pro-logo.webp"
+            alt="Theory Test Pro Logo"
           />
         </a>
       </v-col>

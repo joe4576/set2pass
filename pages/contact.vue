@@ -12,7 +12,11 @@ useMetadata({
       <icon-card icon-url="/icon/speech-bubble-icon.svg" title="Get in touch">
         <v-row class="pt-4">
           <v-col cols="auto">
-            <img src="/icon/facebook-icon.svg" style="width: 33px" />
+            <img
+              src="/icon/facebook-icon.svg"
+              style="width: 33px"
+              class="Facebook Icon"
+            />
           </v-col>
           <v-col cols="auto" class="text-h6">
             <a href="https://www.facebook.com/Set2Pass/"
