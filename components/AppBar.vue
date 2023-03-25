@@ -117,32 +117,36 @@ watch(showFullMenu, () => {
   >
     <v-list>
       <!-- Include a home item, regardless of menuItems -->
-      <v-list-item to="/" prepend-icon="mdi-home">Home</v-list-item>
+      <v-list-item role="option" to="/" prepend-icon="mdi-home">
+        Home
+      </v-list-item>
       <template v-for="(item, i) in menuItems">
         <v-list-item
           v-if="!item.subMenuItems"
           :key="item.to"
+          role="option"
           :to="item.to"
           :prepend-icon="item.icon"
         >
           {{ item.text }}
         </v-list-item>
         <!-- Create a list group if the menu item has a subMenu -->
-        <v-list-group v-else :key="i" :value="item.text">
+        <v-list-group v-else :key="i" :value="item.text" role="presentation">
           <template #activator="{ props }">
             <!-- The activator is the original menu item -->
-            <v-list-item v-bind="props" :prepend-icon="item.icon">
+            <v-list-item v-bind="props" role="option" :prepend-icon="item.icon">
               {{ item.text }}
             </v-list-item>
           </template>
           <!-- First item in the dropdown will be the activator repeated -->
-          <v-list-item :to="item.to" :prepend-icon="item.icon">
+          <v-list-item :to="item.to" role="option" :prepend-icon="item.icon">
             {{ item.text }}
           </v-list-item>
           <v-list-item
             v-for="subMenu in item.subMenuItems"
             :key="subMenu.to"
             :to="subMenu.to"
+            role="option"
             :prepend-icon="subMenu.icon"
           >
             {{ subMenu.text }}
