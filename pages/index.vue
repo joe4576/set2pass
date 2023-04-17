@@ -90,6 +90,18 @@ useMetadata({
     </v-row>
   </hero-base>
 
+  <hero-base class="py-5" color="green-accent-2">
+    <v-row class="align-center justify-center">
+      <v-col cols="auto">
+        <p class="text-body-1 text-center">
+          🎉 We have a
+          <b>pass rate of 82%</b>, from April 17th 2022 - April 17th 2023. The
+          national average in the UK was only <b>48%</b>! 🎉
+        </p>
+      </v-col>
+    </v-row>
+  </hero-base>
+
   <hero-base
     id="faqs"
     class="pb-10"
