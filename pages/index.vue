@@ -58,6 +58,35 @@ useMetadata({
           Registered PassPlus provider
         </badge>
       </v-col>
+      <v-col class="my-3" cols="12">
+        <v-divider />
+      </v-col>
+      <v-col class="qualification-section" cols="12">
+        <h5 class="text-h5">Additional Qualifications</h5>
+        <ul class="qualification-list">
+          <li>
+            <h6 class="text-h6">Level 3 Award in Education and Training</h6>
+            <p>
+              Fundamental understanding of the roles and responsibilities of a
+              teacher/trainer in relation to legislation, equality, diversity,
+              inclusivity and meeting the needs of learners
+            </p>
+          </li>
+          <li>
+            <h6 class="text-h6">
+              Driving Instructors Association Diploma in Driver Education
+              (DipDE)
+            </h6>
+            <p>
+              An industry-based vocational qualification that consolidates the
+              various aspects of a driver trainer's role. These range from
+              knowing legal obligations and regulations, business knowledge,
+              understanding mechanical and vehicle technology aspects, and
+              driving theory and teaching knowledge
+            </p>
+          </li>
+        </ul>
+      </v-col>
     </v-row>
   </hero-base>
 
@@ -181,5 +210,17 @@ useMetadata({
 
 .text-container > p {
   font-size: 1.2rem;
+}
+
+.qualification-list {
+  list-style: none;
+}
+
+ul.qualification-list li {
+  margin: 1rem auto;
+}
+
+.qualification-section {
+  max-width: 800px;
 }
 </style>
