@@ -13,10 +13,10 @@ interface AppIcon {
 
 const features: Feature[] = [
   {
-    title: "What is BlackBox Telematics?",
+    title: "What is DriveClass?",
     imageUrl: "/img/blackbox-1-cropped.webp",
     body: [
-      "BlackBox is an iOS and Android app that displays driving style on a colour coded route map.",
+      "DriveClass is an iOS and Android app that displays driving style on a colour coded route map.",
       "Every manoeuvre is recorded - braking, acceleration and left/right turns.",
     ],
   },
@@ -37,10 +37,10 @@ const features: Feature[] = [
     ],
   },
   {
-    title: "BlackBox is not associated with any insurance companies",
+    title: "DriveClass is not associated with any insurance companies",
     imageUrl: "/img/blackbox-6-cropped.webp",
     body: [
-      "BlackBox can be used in any vehicle and by any user.",
+      "DriveClass can be used in any vehicle and by any user.",
       "No additional hardware is needed - just your phone.",
     ],
   },
@@ -65,29 +65,29 @@ const appIcons: AppIcon[] = [
   {
     href: "https://apps.apple.com/gb/app/driveclass/id1495536306",
     imageUrl: "/img/blackbox-ios.webp",
-    text: "BlackBox Telematics (iOS)",
+    text: "DriveClass (iOS)",
   },
   {
     href: "https://apps.apple.com/us/app/drive-class/id1496425927",
     imageUrl: "/img/blackbox-ios-free.webp",
-    text: "BlackBox Demo (free) (iOS)",
+    text: "DriveClass Demo (free) (iOS)",
   },
   {
     href: "https://play.google.com/store/apps/details?id=me.com.driveadi",
     imageUrl: "/img/blackbox-android.webp",
-    text: "BlackBox Telematics (Android)",
+    text: "DriveClass (Android)",
   },
   {
     href: "https://play.google.com/store/apps/details?id=me.com.driveadifree",
     imageUrl: "/img/blackbox-android-free.webp",
-    text: "BlackBox Demo (free) (Android)",
+    text: "DriveClass Demo (free) (Android)",
   },
 ];
 
 useMetadata({
-  title: "BlackBox | Set2Pass",
+  title: "DriveClass | Set2Pass",
   description:
-    "BlackBox is an app that monitors your driving style and reports how you drove on a detailed map view.",
+    "DriveClass is an app that monitors your driving style and reports how you drove on a detailed map view.",
 });
 
 const { mdAndUp } = useVuetifyBreakpoints();
@@ -101,7 +101,7 @@ const { mdAndUp } = useVuetifyBreakpoints();
     :scale="0.6"
   >
     <div class="d-flex fill-height justify-center align-center">
-      <h1 class="text-h1 text-white">BlackBox</h1>
+      <h1 class="text-h1 text-white">DriveClass</h1>
     </div>
   </v-parallax>
 
@@ -121,7 +121,7 @@ const { mdAndUp } = useVuetifyBreakpoints();
     </template>
   </hero-feature>
 
-  <hero-base title="Find BlackBox on the App Store or Play Store">
+  <hero-base title="Find DriveClass on the App Store or Play Store">
     <v-container>
       <v-row class="justify-space-around text-center">
         <v-col

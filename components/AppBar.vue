@@ -18,13 +18,13 @@ const menuItems: MenuItem[] = [
     icon: "mdi-cash-multiple",
   },
   {
-    text: "BlackBox",
-    to: "/blackbox",
+    text: "DriveClass",
+    to: "/driveclass",
     icon: "mdi-cellphone",
     subMenuItems: [
       {
         text: "Privacy Policy",
-        to: "/blackbox/privacy-policy",
+        to: "/driveclass/privacy-policy",
         icon: "mdi-calendar-question-outline",
       },
     ],

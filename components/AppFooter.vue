@@ -46,13 +46,13 @@
             </v-col>
 
             <v-col cols="auto">
-              <p class="text-body-1 font-weight-bold">Blackbox</p>
+              <p class="text-body-1 font-weight-bold">DriveClass</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
-                  <nuxt-link to="/blackbox">About</nuxt-link>
+                  <nuxt-link to="/driveclass">About</nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link to="/blackbox/privacy-policy">
+                  <nuxt-link to="/driveclass/privacy-policy">
                     Privacy Policy
                   </nuxt-link>
                 </li>

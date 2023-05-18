@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useMetadata({
-  title: "BlackBox Privacy Policy | Set2Pass",
-  description: "BlackBox privacy policy",
+  title: "DriveClass Privacy Policy | Set2Pass",
+  description: "DriveClass privacy policy",
 });
 </script>
 
@@ -9,7 +9,7 @@ useMetadata({
   <text-page title="Privacy Policy" class="mb-12">
     <p class="font-weight-bold">Policy</p>
     <p>
-      The BlackBox application, hereinafter referred to as “the Service”, is
+      The DriveClass application, hereinafter referred to as “the Service”, is
       intended for use as is.
     </p>
     <p>
