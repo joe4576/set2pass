@@ -90,7 +90,7 @@ useMetadata({
     "DriveClass is an app that monitors your driving style and reports how you drove on a detailed map view.",
 });
 
-const { mdAndUp } = useVuetifyBreakpoints();
+const { mdAndUp, smAndDown } = useVuetifyBreakpoints();
 </script>
 
 <template>
@@ -101,7 +101,15 @@ const { mdAndUp } = useVuetifyBreakpoints();
     :scale="0.6"
   >
     <div class="d-flex fill-height justify-center align-center">
-      <h1 class="text-h1 text-white">DriveClass</h1>
+      <h1
+        :class="{
+          'text-white': true,
+          'text-h1': mdAndUp,
+          'text-h2': smAndDown,
+        }"
+      >
+        DriveClass
+      </h1>
     </div>
   </v-parallax>
 
