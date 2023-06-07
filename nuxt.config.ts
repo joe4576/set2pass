@@ -18,4 +18,9 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxtjs/robots"],
+  runtimeConfig: {
+    public: {
+      gaMeasurementId: process.env.FIREBASE_MEASUREMENT_ID,
+    },
+  },
 });
