@@ -19,6 +19,7 @@ onMounted(() => {
       <nuxt-page />
     </v-main>
     <app-footer />
+    <cookie-banner />
   </v-app>
 </template>
 
