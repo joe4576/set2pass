@@ -37,9 +37,7 @@ const imageColumnOrder = computed((): number => {
         >
           <slot name="title" />
         </h3>
-        <p class="text-body-1">
-          <slot name="body" />
-        </p>
+        <slot name="body" />
       </v-col>
     </v-row>
   </hero-base>

@@ -121,7 +121,7 @@ useMetadata({
   >
     <template #title>{{ feature.title }}</template>
     <template #body>
-      <p v-for="line in feature.body" :key="line" class="my-3">
+      <p v-for="line in feature.body" :key="line" class="my-3 text-body-1">
         {{ line }}
       </p>
     </template>
