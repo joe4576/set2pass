@@ -89,23 +89,21 @@ useMetadata({
   description:
     "DriveClass is an app that monitors your driving style and reports how you drove on a detailed map view.",
 });
-
-const { mdAndUp, smAndDown } = useVuetifyBreakpoints();
 </script>
 
 <template>
   <v-parallax
     class="parallax"
     src="/img/blackbox-0.webp"
-    :height="mdAndUp ? 350 : 250"
+    :height="$vuetify.display.mdAndUp ? 350 : 250"
     :scale="0.6"
   >
     <div class="d-flex fill-height justify-center align-center">
       <h1
         :class="{
           'text-white': true,
-          'text-h1': mdAndUp,
-          'text-h2': smAndDown,
+          'text-h1': $vuetify.display.mdAndUp,
+          'text-h2': $vuetify.display.smAndDown,
         }"
       >
         DriveClass

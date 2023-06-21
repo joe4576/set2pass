@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { useDisplay } from "vuetify";
+
 interface HeroFeatureProps {
   imageUrl: string;
   imagePosition?: "left" | "right";
 }
 
-const { smAndDown, mdAndUp } = useVuetifyBreakpoints();
+const { smAndDown, mdAndUp } = useDisplay();
 
 const props = withDefaults(defineProps<HeroFeatureProps>(), {
   imagePosition: "left",

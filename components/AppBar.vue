@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useDisplay } from "vuetify";
+
 interface MenuItem {
   text: string;
   to: string;
@@ -42,7 +44,7 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-const { mdAndUp: showFullMenu } = useVuetifyBreakpoints();
+const { mdAndUp: showFullMenu } = useDisplay();
 
 const showNavigationDrawer = ref(false);
 

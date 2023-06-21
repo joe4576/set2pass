@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const { smAndDown } = useVuetifyBreakpoints();
-
 useMetadata({
   title: "Set2Pass",
   description:
@@ -9,7 +7,7 @@ useMetadata({
 </script>
 
 <template>
-  <template v-if="!smAndDown">
+  <template v-if="!$vuetify.display.smAndDown">
     <v-parallax class="hero" src="/img/index-hero.webp">
       <div class="text-container">
         <img
@@ -39,7 +37,7 @@ useMetadata({
 
   <hero-book-now />
 
-  <hero-owner :mobile="smAndDown" class="py-12" />
+  <hero-owner :mobile="$vuetify.display.smAndDown" class="py-12" />
 
   <hero-base class="py-8">
     <v-row class="justify-space-around">

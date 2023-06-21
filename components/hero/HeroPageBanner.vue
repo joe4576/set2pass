@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { BackgroundTypeProps } from "@/components/hero/base/HeroBase.vue";
 
-const { smAndDown } = useVuetifyBreakpoints();
-
 interface HeroPageBannerProps extends BackgroundTypeProps {
   title: string;
 }
@@ -12,7 +10,7 @@ defineProps<HeroPageBannerProps>();
 
 <template>
   <hero-base
-    :height="smAndDown ? '200px' : '250px'"
+    :height="$vuetify.display.smAndDown ? '200px' : '250px'"
     :background-type="'green-gradient'"
   >
     <v-row class="align-center" style="height: 100%" no-gutters>

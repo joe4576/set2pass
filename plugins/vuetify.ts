@@ -15,6 +15,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     components,
     directives,
+    ssr: true,
     theme: {
       themes: {
         theme,
