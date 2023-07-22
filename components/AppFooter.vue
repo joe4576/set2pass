@@ -12,14 +12,12 @@
               alt="Set2Pass Logo"
             />
           </nuxt-link>
-          <p class="text-body-1 mt-3 pl-1 text-blue-grey-lighten-3">
-            Driving School
-          </p>
+          <p class="mt-3 pl-1 text-blue-grey-lighten-3">Driving School</p>
         </v-col>
         <v-col cols="auto">
           <v-row style="gap: 30px">
             <v-col cols="auto">
-              <p class="text-body-1 font-weight-bold">Information</p>
+              <p class="font-weight-bold">Information</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
                   <nuxt-link to="/how-to-start">How to start</nuxt-link>
@@ -34,7 +32,7 @@
             </v-col>
 
             <v-col cols="auto">
-              <p class="text-body-1 font-weight-bold">Resources</p>
+              <p class="font-weight-bold">Resources</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
                   <nuxt-link to="/contact">Contact us</nuxt-link>
@@ -46,7 +44,7 @@
             </v-col>
 
             <v-col cols="auto">
-              <p class="text-body-1 font-weight-bold">DriveClass</p>
+              <p class="font-weight-bold">DriveClass</p>
               <ul class="text-blue-grey-lighten-3">
                 <li>
                   <nuxt-link to="/driveclass">About</nuxt-link>

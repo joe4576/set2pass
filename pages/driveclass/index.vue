@@ -121,7 +121,7 @@ useMetadata({
   >
     <template #title>{{ feature.title }}</template>
     <template #body>
-      <p v-for="line in feature.body" :key="line" class="my-3 text-body-1">
+      <p v-for="line in feature.body" :key="line" class="my-3">
         {{ line }}
       </p>
     </template>
@@ -139,7 +139,7 @@ useMetadata({
           <a :href="icon.href" target="_blank">
             <img class="logo" :src="icon.imageUrl" :alt="`${icon.text} Logo`" />
           </a>
-          <p class="text-body-1">{{ icon.text }}</p>
+          <p class="">{{ icon.text }}</p>
         </v-col>
       </v-row>
     </v-container>

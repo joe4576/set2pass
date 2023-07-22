@@ -72,7 +72,7 @@ useMetadata({
           <v-card v-bind="props" class="mx-2" :elevation="isHovering ? 4 : 2">
             <v-card-text>
               <p class="text-h6 mb-1">{{ item.title }}</p>
-              <p class="text-body-1">{{ item.body }}</p>
+              <p>{{ item.body }}</p>
             </v-card-text>
             <v-card-actions v-if="item.href || item.nuxt">
               <template v-if="item.nuxt">

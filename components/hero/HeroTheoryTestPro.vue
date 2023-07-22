@@ -8,7 +8,7 @@
   >
     <v-row>
       <v-col class="my-auto" cols="12" sm="9">
-        <p class="text-body-1 text-white">
+        <p class="text-white">
           We provide FREE online theory training to all SET2PASS Driving School
           students via the
           <a href="https://www.theorytestpro.co.uk/" target="_blank"

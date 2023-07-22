@@ -30,7 +30,7 @@ useMetadata({
           alt="Set2Pass Logo"
         />
         <h3 class="mt-4 text-h6 font-weight-bold">Driving School</h3>
-        <p class="text-body-1">Learn fast and drive safe with SET2PASS</p>
+        <p>Learn fast and drive safe with SET2PASS</p>
       </div>
     </div>
   </template>
@@ -91,7 +91,7 @@ useMetadata({
   <hero-base class="py-5" color="green-accent-2">
     <v-row class="align-center justify-center">
       <v-col cols="auto">
-        <p class="text-body-1 text-center">
+        <p class="text-center">
           🎉 We have a
           <b>pass rate of 82%</b>, from April 17th 2022 - April 17th 2023. The
           national average in the UK was only <b>48%</b>! 🎉
@@ -127,7 +127,7 @@ useMetadata({
         </a>
       </v-col>
       <v-col cols="auto">
-        <p class="text-body-1 font-weight-bold text-center">
+        <p class="font-weight-bold text-center">
           You can see more reviews on FreeIndex - we're rated 5⭐️ with over 50+
           reviews!
         </p>

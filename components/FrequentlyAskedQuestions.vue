@@ -61,7 +61,7 @@ const faqs: Faq[] = [
                 </h5>
               </v-col>
               <v-col cols="12" class="pt-0">
-                <p class="text-body-1">
+                <p>
                   {{ faq.content }}
                 </p>
               </v-col>

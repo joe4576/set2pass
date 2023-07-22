@@ -17,7 +17,7 @@ useMetadata({
       >
         <v-row>
           <v-col cols="auto" class="text-center">
-            <p class="text-body-1">
+            <p>
               To provide the maximum benefit to our students, we always
               recommend 90-minute lessons
             </p>
@@ -61,11 +61,11 @@ useMetadata({
         />
       </v-col>
       <v-col cols="12" sm="4" class="my-auto">
-        <p class="text-body-1">
+        <p>
           We now offer gift vouchers, which are available to purchase from your
           instructor.
         </p>
-        <p class="text-body-1">To find out more, please get in touch.</p>
+        <p>To find out more, please get in touch.</p>
         <v-btn
           nuxt
           to="contact"

@@ -19,7 +19,7 @@ defineProps<TestimonialCardProps>();
               style="width: 35px"
               alt="Speechmark Icon"
             />
-            <p class="text-body-1 font-italic">
+            <p class="font-italic">
               <slot />
             </p>
           </v-col>
