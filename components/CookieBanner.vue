@@ -32,8 +32,8 @@ const reject = () => {
 
 <template>
   <v-card
-    v-bind="$attrs"
     v-if="showBanner"
+    v-bind="$attrs"
     class="cookie-banner"
     elevation="24"
   >
