@@ -32,6 +32,18 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
+    text: "MiSpeedo",
+    to: "/mispeedo",
+    icon: "mdi-speedometer",
+    subMenuItems: [
+      {
+        text: "Privacy Policy",
+        to: "/mispeedo/privacy-policy",
+        icon: "mdi-calendar-question-outline",
+      },
+    ],
+  },
+  {
     text: "Terms",
     to: "/terms",
     icon: "mdi-newspaper-variant-outline",

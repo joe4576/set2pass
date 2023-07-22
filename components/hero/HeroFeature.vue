@@ -49,5 +49,6 @@ const imageColumnOrder = computed((): number => {
   height: 300px;
   border-radius: 15px;
   margin: 0 auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 </style>
