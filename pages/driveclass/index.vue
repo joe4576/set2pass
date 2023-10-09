@@ -45,7 +45,7 @@ const features: Feature[] = [
     title: "Student Database",
     imageUrl: "/img/blackbox-3-cropped.webp",
     body: [
-      "Keep records of how your students are progressing over every lesson (currently available on iOS version).",
+      "Keep records of how your students are progressing over every lesson.",
     ],
   },
 ];
