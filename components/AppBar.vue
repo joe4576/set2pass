@@ -27,7 +27,6 @@ const menuItems: MenuItem[] = [
       {
         text: "Privacy Policy",
         to: "/driveclass/privacy-policy",
-        icon: "mdi-calendar-question-outline",
       },
     ],
   },
@@ -39,7 +38,6 @@ const menuItems: MenuItem[] = [
       {
         text: "Privacy Policy",
         to: "/mispeedo/privacy-policy",
-        icon: "mdi-calendar-question-outline",
       },
     ],
   },
@@ -153,7 +151,7 @@ watch(showFullMenu, () => {
             </v-list-item>
           </template>
           <!-- First item in the dropdown will be the activator repeated -->
-          <v-list-item :to="item.to" role="option" :prepend-icon="item.icon">
+          <v-list-item :to="item.to" role="option">
             {{ item.text }}
           </v-list-item>
           <v-list-item
