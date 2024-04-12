@@ -67,7 +67,7 @@
       </v-row>
       <v-row>
         <v-col cols="12" class="text-center">
-          &copy; SET2PASS 2021-2023. All rights reserved.
+          &copy; SET2PASS 2021-2024. All rights reserved.
         </v-col>
       </v-row>
       <v-row>
