@@ -62,12 +62,11 @@ const testimonials: Testimonial[] = [
 
 .card {
   margin: 0 auto 1.5rem;
-  display: flex;
 }
 
 @media (min-width: 1200px) {
   .card:nth-child(6) {
-    height: 380px !important;
+    height: 380px;
   }
 }
 
