@@ -9,7 +9,7 @@ defineProps<TestimonialCardProps>();
 
 <template>
   <v-card max-width="350px" elevation="3">
-    <v-card-text>
+    <v-card-text class="d-flex flex-column justify-center">
       <v-container>
         <v-row>
           <v-col cols="12">

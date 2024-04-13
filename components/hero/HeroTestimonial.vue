@@ -60,6 +60,17 @@ const testimonials: Testimonial[] = [
   column-count: 3;
 }
 
+.card {
+  margin: 0 auto 1.5rem;
+  display: flex;
+}
+
+@media (min-width: 1200px) {
+  .card:nth-child(6) {
+    height: 380px !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .card-container {
     column-count: 2;
@@ -67,13 +78,10 @@ const testimonials: Testimonial[] = [
     margin: 0 auto;
   }
 }
+
 @media (max-width: 800px) {
   .card-container {
     column-count: 1;
   }
-}
-
-.card {
-  margin: 0 auto 1.5rem;
 }
 </style>
