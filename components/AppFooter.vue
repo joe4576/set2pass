@@ -4,7 +4,11 @@
   <v-footer class="pa-0">
     <hero-base color="blue-grey-darken-2" full-height class="pb-4">
       <v-row class="pt-10 pb-8">
-        <v-col cols="12" sm="4">
+        <v-col
+          class="d-flex flex-column align-center align-sm-start"
+          cols="12"
+          sm="4"
+        >
           <nuxt-link to="/">
             <img
               src="/img/set2pass.webp"
