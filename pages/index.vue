@@ -128,7 +128,7 @@ useMetadata({
       </v-col>
       <v-col cols="auto">
         <p class="font-weight-bold text-center">
-          You can see more reviews on FreeIndex - we're rated 5⭐️ with over 50+
+          You can see more reviews on FreeIndex - we're rated 5⭐️ with over 75+
           reviews!
         </p>
       </v-col>
