@@ -21,4 +21,8 @@ defineProps<{
 :slotted(ul) {
   margin-left: 35px;
 }
+
+:slotted(p) {
+  margin-bottom: 1rem;
+}
 </style>
