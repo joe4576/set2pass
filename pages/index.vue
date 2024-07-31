@@ -111,29 +111,7 @@ useMetadata({
 
   <hero-testimonial class="pb-10" />
 
-  <hero-base color="teal-lighten-5">
-    <v-row class="align-center justify-center">
-      <v-col cols="auto">
-        <a
-          href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
-          target="_blank"
-          aria-label="See Set2Pass' other reviews on FreeIndex"
-        >
-          <img
-            src="/img/freeindex.webp"
-            style="width: 100px"
-            alt="FreeIndex Logo"
-          />
-        </a>
-      </v-col>
-      <v-col cols="auto">
-        <p class="font-weight-bold text-center">
-          You can see more reviews on FreeIndex - we're rated 5⭐️ with over 75+
-          reviews!
-        </p>
-      </v-col>
-    </v-row>
-  </hero-base>
+  <hero-free-index />
 
   <hero-theory-test-pro />
 </template>
