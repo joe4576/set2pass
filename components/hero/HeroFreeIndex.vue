@@ -23,7 +23,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <hero-base color="teal-lighten-5">
+  <hero-base color="teal-lighten-4">
     <v-row class="align-center justify-center">
       <v-col cols="auto">
         <a

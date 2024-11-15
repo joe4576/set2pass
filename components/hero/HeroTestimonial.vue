@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
 </script>
 
 <template>
-  <hero-base title="What our students say">
+  <hero-base title="What our students say" color="background">
     <div class="card-container">
       <testimonial-card
         v-for="(testimonial, idx) in testimonials"

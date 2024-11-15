@@ -1,11 +1,7 @@
-<script setup lang="ts">
-defineProps<{
-  mobile: boolean;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <hero-base color="background" v-bind="$attrs">
+  <hero-base v-bind="$attrs">
     <v-row>
       <v-col cols="12" md="auto" class="d-flex align-center justify-center">
         <div class="pt-2 d-flex justify-center flex-column">
@@ -15,7 +11,7 @@ defineProps<{
           </p>
         </div>
       </v-col>
-      <v-divider v-if="!mobile" vertical class="ma-5" />
+      <v-divider v-if="!$vuetify.display.smAndDown" vertical class="ma-5" />
       <v-col class="d-flex align-center flex-column">
         <div class="my-auto">
           <p>

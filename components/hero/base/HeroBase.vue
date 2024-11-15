@@ -31,7 +31,7 @@ defineProps<HeroBaseProps>();
         height: '100%',
       }"
     >
-      <h4 v-if="title" class="text-h4 text-center my-10 pb-4">{{ title }}</h4>
+      <h4 v-if="title" class="title text-center my-10 pb-4">{{ title }}</h4>
       <slot />
     </v-container>
   </v-sheet>
@@ -52,5 +52,12 @@ defineProps<HeroBaseProps>();
   background: #e39c05;
   background: -webkit-linear-gradient(left, #e39c05, #fbbd39);
   background: linear-gradient(to right, #e39c05, #fbbd39);
+}
+
+/* blend between text-h4 and text-h3 */
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.05;
 }
 </style>
