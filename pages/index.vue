@@ -37,55 +37,15 @@ useMetadata({
 
   <hero-book-now />
 
-  <hero-owner :mobile="$vuetify.display.smAndDown" class="py-12" />
+  <hero-owner class="py-16" />
 
-  <hero-base class="py-8">
-    <v-row class="justify-space-around">
-      <v-col cols="12" sm="6" md="4">
-        <badge image-url="/img/iam-badge.webp">
-          IAM member for over 20 years
-        </badge>
-      </v-col>
-      <v-col cols="12" sm="6" md="4">
-        <badge image-url="/img/dvsa-badge.webp">
-          DVSA Approved Driving Instructor
-        </badge>
-      </v-col>
-      <v-col cols="12" sm="6" md="4">
-        <badge image-url="/img/pass-plus-badge.webp">
-          Registered PassPlus provider
-        </badge>
-      </v-col>
-      <v-col class="my-3" cols="12">
-        <v-divider />
-      </v-col>
-      <v-col class="qualification-section" cols="12">
-        <h5 class="text-h5">Additional Qualifications</h5>
-        <ul class="qualification-list">
-          <li>
-            <h6 class="text-h6">Level 3 Award in Education and Training</h6>
-            <p>
-              Fundamental understanding of the roles and responsibilities of a
-              teacher/trainer in relation to legislation, equality, diversity,
-              inclusivity and meeting the needs of learners
-            </p>
-          </li>
-          <li>
-            <h6 class="text-h6">
-              Driving Instructors Association Diploma in Driver Education
-              (DipDE)
-            </h6>
-            <p>
-              An industry-based vocational qualification that consolidates the
-              various aspects of a driver trainer's role. These range from
-              knowing legal obligations and regulations, business knowledge,
-              understanding mechanical and vehicle technology aspects, and
-              driving theory and teaching knowledge
-            </p>
-          </li>
-        </ul>
-      </v-col>
-    </v-row>
+  <hero-base
+    id="faqs"
+    class="pb-16"
+    title="Frequently Asked Questions"
+    color="background"
+  >
+    <frequently-asked-questions />
   </hero-base>
 
   <hero-base class="py-5" color="green-accent-2">
@@ -93,23 +53,16 @@ useMetadata({
       <v-col cols="auto">
         <p class="text-center">
           🎉 We have a
-          <b>pass rate of 82%</b>, from April 17th 2022 - April 17th 2023. The
-          national average in the UK was only <b>48%</b>! 🎉
+          <b>pass rate of 76%</b>, from September 2023 - September 2024. The
+          national average in the UK was <b>47.9%</b>! 🎉
         </p>
       </v-col>
     </v-row>
   </hero-base>
 
-  <hero-base
-    id="faqs"
-    class="pb-10"
-    color="background"
-    title="Frequently Asked Questions"
-  >
-    <frequently-asked-questions />
-  </hero-base>
+  <hero-instructors class="pb-16" />
 
-  <hero-testimonial class="pb-10" />
+  <hero-testimonial class="pb-16" />
 
   <hero-free-index />
 

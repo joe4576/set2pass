@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouteLocationRaw } from "vue-router";
+import { VCard, VCardText } from "vuetify/components";
 
 interface Faq {
   title: string;
@@ -13,7 +14,7 @@ const faqs: Faq[] = [
   {
     title: "How much do lessons cost?",
     content:
-      "Lessons are £40/hour. I teach 90 minute lessons, so that will be £60 per lesson.",
+      "Each lesson is 90 minutes. Nikki charges £60/lesson, and Sean charges £50/lesson.",
     icon: "mdi-currency-usd",
     buttonLocation: {
       name: "pricing",
@@ -22,7 +23,7 @@ const faqs: Faq[] = [
   },
   {
     title: "Do you offer automatic lessons?",
-    content: "Yes. I offer automatic and manual lessons.",
+    content: "Yes. Nikki offers automatic lessons.",
     icon: "mdi-car",
   },
   {
@@ -32,13 +33,13 @@ const faqs: Faq[] = [
   },
   {
     title: "How long is your waiting list?",
-    content: "My waiting list is typically 4-6 months.",
+    content:
+      "Nikki's waiting list is typically 4-6 months. Sean currently has no waiting list, and is accepting new students.",
     icon: "mdi-calendar",
   },
   {
     title: "Can I book multiple lessons at once?",
-    content:
-      "Yes. I offer a 5% discount if you book 10 90 minute lessons in advanced.",
+    content: "Yes. We offer a 5% discount if you book 10 lessons in advanced.",
     icon: "mdi-bookmark-outline",
     buttonText: "Contact us now",
     buttonLocation: {
@@ -49,27 +50,42 @@ const faqs: Faq[] = [
 </script>
 
 <template>
-  <v-container class="pb-0">
+  <v-container class="py-0">
     <v-row>
       <v-col cols="12" md="7">
-        <v-card elevation="4">
-          <v-card-text>
-            <v-row v-for="faq in faqs" :key="faq.title">
+        <component
+          :is="$vuetify.display.smAndDown ? 'div' : VCard"
+          elevation="4"
+        >
+          <component :is="$vuetify.display.smAndDown ? 'div' : VCardText">
+            <v-row
+              v-for="(faq, index) in faqs"
+              :key="faq.title"
+              :class="{
+                'my-8': $vuetify.display.smAndDown && index !== 0,
+                'mb-0': $vuetify.display.smAndDown && index === faqs.length - 1,
+              }"
+            >
               <v-col cols="12" class="pb-0">
                 <h5 class="text-h5">
                   {{ faq.title }}
                 </h5>
               </v-col>
-              <v-col cols="12" class="pt-0">
+              <v-col cols="12" class="pt-sm-0 pt-1">
                 <p>
                   {{ faq.content }}
                 </p>
               </v-col>
             </v-row>
-          </v-card-text>
-        </v-card>
+          </component>
+        </component>
       </v-col>
-      <v-col cols="12" md="5" class="d-flex justify-center mt-8">
+      <v-col
+        v-if="$vuetify.display.mdAndUp"
+        cols="12"
+        md="5"
+        class="d-flex justify-center mt-8"
+      >
         <img
           src="/icon/question-icon.svg"
           alt="Question Mark Icon"
