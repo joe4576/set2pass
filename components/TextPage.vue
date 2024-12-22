@@ -18,11 +18,14 @@ defineProps<{
   padding: 0 12px;
 }
 
-:slotted(ul) {
+:slotted(ul),
+:slotted(ol) {
   margin-left: 35px;
 }
 
-:slotted(p) {
+:slotted(p),
+:slotted(ul),
+:slotted(ol) {
   margin-bottom: 1rem;
 }
 </style>
