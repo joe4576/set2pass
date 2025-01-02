@@ -9,31 +9,25 @@ defineProps<TestimonialCardProps>();
 
 <template>
   <v-card max-width="350px" elevation="3">
-    <v-card-text class="d-flex flex-column justify-center">
-      <v-container>
-        <v-row>
-          <v-col cols="12">
-            <img
-              class="mb-3"
-              src="/icon/quote-icon.svg"
-              style="width: 35px"
-              alt="Speechmark Icon"
-            />
-            <p class="font-italic">
-              <slot />
-            </p>
-          </v-col>
-        </v-row>
-        <v-row class="align-center">
-          <v-col class="pr-0" cols="auto">
-            <img class="picture" :src="imageUrl" :alt="`${name}`" />
-          </v-col>
-          <v-col cols="auto">
-            <p class="text-body-2">
-              {{ name }}
-            </p>
-          </v-col>
-        </v-row>
+    <v-card-text class="h-100">
+      <v-container class="card-container">
+        <div class="quote-container">
+          <img
+            class="mb-3"
+            src="/icon/quote-icon.svg"
+            style="width: 35px"
+            alt="Speech mark Icon"
+          />
+          <p class="font-italic">
+            <slot />
+          </p>
+        </div>
+        <div class="picture-container">
+          <img class="picture" :src="imageUrl" :alt="name" />
+          <p class="text-body-2">
+            {{ name }}
+          </p>
+        </div>
       </v-container>
     </v-card-text>
   </v-card>
@@ -43,5 +37,27 @@ defineProps<TestimonialCardProps>();
 .picture {
   border-radius: 100%;
   width: 80px;
+  height: 80px;
+}
+
+.picture-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 }
 </style>

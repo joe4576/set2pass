@@ -7,34 +7,34 @@ interface Testimonial extends TestimonialCardProps {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Mary",
-    imageUrl: "/img/mary.webp",
-    text: "So pleased that I learnt to drive with Set2Pass. It was really useful to receive feedback, that was both constructive and helpful, during and after each lesson. At a time where many students are struggling with the process of learning to drive anad taking the driving test, I was very lucky to have Nikki to guide and support me.",
+    name: "Chloe",
+    imageUrl: "/img/chloe.webp",
+    text: "Absolutely fantastic driving instructor, I would 100% recommend. Nikki is a very patient instructor who truly cares about her students and gives them the courage from the very first lesson to when you pass. Thank you so much for the constant encouragement and skill to help me to pass first time!",
   },
   {
-    name: "Tom",
-    imageUrl: "/img/tom.webp",
-    text: "Overall, I believe had I not been with Nikki, I would not have passed first time. Her dedication to give me constructive feedback after the lesson led me to know my strengths and weaknesses, actively working on the latter, with her in the very next lesson. This proactive approach, made me feel I had value for money, as the quality of the service was very very high. Thank you Nikki!",
+    name: "Ben",
+    imageUrl: "/img/ben.webp",
+    text: "I have just recently passed first time with no minors through this driving school. From start to finish the teaching, knowledge and experience was above the mark as well as the attention to detail that could be corrected in my driving. I couldn't recommend this service enough. Nikki is a lovely person and is easy to get along with, so that every lesson is consistent, constructive and enjoyable.",
   },
   {
-    name: "Emily",
-    imageUrl: "/img/emily.webp",
-    text: "Nikki was the most amazing driving instructor. She helped me through everything and was so calm when teaching. She made me feel comfortable to ask any questions I had or to say when I wasn't sure of something. I passed first time and couldn't be more grateful!",
+    name: "Stirling",
+    imageUrl: "/img/stirling.webp",
+    text: "Nikki is a wonderful driving instructor. I contacted her after having lessons from another instructor who made me question my confidence and whether I wanted to drive. Nikki restored my confidence and due to her patience, kindness and knowledge I was able to pass my test first time. I highly recommend Nikki and will always be eternally grateful to her. Thank you.",
   },
   {
-    name: "Harry",
-    imageUrl: "/img/harry.webp",
-    text: "Nikki helped me gain confidence on the road and was very patient with me. She was always up to date with my progress and knew exactly what I needed to do next to progress. After every lesson I felt I was improving which really helps if you're an overthinker or worrier like myself. And after passing first time with one 1 minor I can wholehartedly say Nikki is the best instructor out there and I will be recommending her to all my friends and family.",
+    name: "Vicky",
+    imageUrl: "/img/vicky.webp",
+    text: "Nikki is an absolutely amazing driving instructor! Very friendly, calm and patient during all her lessons! She has such a clear structured way of explaining everything you need to know for being a good driver and staying safe on the roads! I can not thank her enough for truly helping my confidence and comfortably grow as a driver :) 100% would recommend her to anyone!",
   },
   {
-    name: "Ryan",
-    imageUrl: "/img/ryan.webp",
-    text: "Nikki has absolutely saved my life! I failed my test a series of times years ago and for the best part of 8 years I didn't even want to consider driving again. I'm so grateful that I met Nikki because she completely transformed my confidence to the point where I actually quite enjoy driving! I just passed my test today and I can 100% say that if it wasn't for Nikki I probably still wouldn't want to drive, so I would recommend her to aboslutely anyone that is looking to get out on the road!",
+    name: "James",
+    imageUrl: "/img/james.webp",
+    text: "Nikki is an incredibly patient and informative person and driving instructor. She always helped me by providing insightful tips as well as constructive feedback. I always felt I was learning more and more every lesson and was able to clearly see progress. Nikki gave me both confidence and assurance in my own abilities to help me pass my test through her lessons. I would highly recommend Nikki to anyone learning to drive, and can guarantee both an incredible driving instructor and a lovely person to teach you.",
   },
   {
-    name: "Georgia",
-    imageUrl: "/img/georgia.webp",
-    text: "Massive thank you to to Nikki who helped me pass my test first time after just 17 hours of tuition! She was calm, understanding and incredibly patient and I couldn't recommend her enough.",
+    name: "Isla",
+    imageUrl: "/img/isla.webp",
+    text: "Nikki was an incredible driving instructor and went above and beyond for me. I felt like I could ask her any questions I had and she would answer them clearly and calmly. She creates such a safe learning environment and encouraged me at every step.",
   },
 ];
 </script>
@@ -57,30 +57,9 @@ const testimonials: Testimonial[] = [
 
 <style scoped>
 .card-container {
-  column-count: 3;
-}
-
-.card {
-  margin: 0 auto 1.5rem;
-}
-
-@media (min-width: 1200px) {
-  .card:nth-child(6) {
-    height: 380px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .card-container {
-    column-count: 2;
-    max-width: 740px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 800px) {
-  .card-container {
-    column-count: 1;
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 </style>
