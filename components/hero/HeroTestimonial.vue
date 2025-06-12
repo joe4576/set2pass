@@ -12,6 +12,16 @@ const testimonials: Testimonial[] = [
     text: "Absolutely fantastic driving instructor, I would 100% recommend. Nikki is a very patient instructor who truly cares about her students and gives them the courage from the very first lesson to when you pass. Thank you so much for the constant encouragement and skill to help me to pass first time!",
   },
   {
+    name: "Lucy",
+    imageUrl: "/img/lucy.webp",
+    text: "I had Sean as my instructor, he was absolutely incredible! He was so kind, patient and helpful and really took the time to make me feel comfortable and confident in my driving. Sean really helped me to build good driving habits and nail the parts that I found nerve racking or difficult. He really cares that his students feel confident and test ready, and it’s down to him that I passed first time. :)",
+  },
+  {
+    name: "Jack",
+    imageUrl: "/img/jack.webp",
+    text: "I got driving with Sean at the end of February, although I had some driving experience before I still managed to pass with two minors by the end of may. From start to finish he records the things to work on and things your doing well, puts his time into what you need and gives the all the important details you need to know so that you’ll learn quick and easy. Learning to drive has been made to feel easy and simple because of Sean. If you get to learn with him then you’re in good hands, I couldn’t recommend him enough.",
+  },
+  {
     name: "Ben",
     imageUrl: "/img/ben.webp",
     text: "I have just recently passed first time with no minors through this driving school. From start to finish the teaching, knowledge and experience was above the mark as well as the attention to detail that could be corrected in my driving. I couldn't recommend this service enough. Nikki is a lovely person and is easy to get along with, so that every lesson is consistent, constructive and enjoyable.",
