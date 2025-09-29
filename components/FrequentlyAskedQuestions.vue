@@ -13,8 +13,7 @@ interface Faq {
 const faqs: Faq[] = [
   {
     title: "How much do lessons cost?",
-    content:
-      "Each lesson is 90 minutes. Nikki charges £60/lesson, and Sean charges £50/lesson.",
+    content: "Each lesson is 90 minutes. Nikki and Sean charge £60/lesson.",
     icon: "mdi-currency-usd",
     buttonLocation: {
       name: "pricing",
@@ -34,7 +33,7 @@ const faqs: Faq[] = [
   {
     title: "How long is your waiting list?",
     content:
-      "Nikki's waiting list is typically 4-6 months. Sean currently has no waiting list, and is accepting new students.",
+      "Our waiting list depends on your which days and times you are available. Lessons during the day mid-week are available sooner than evenings and weekends.",
     icon: "mdi-calendar",
   },
   {

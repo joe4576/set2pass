@@ -52,16 +52,15 @@
           <instructor name="Sean Brown" image-src="/img/sean.webp">
             <h3>About Sean</h3>
             <p>
-              Sean is a newly-qualified PDI. He is a qualified advanced driver,
-              and is undergoing training to become a fully certified driving
-              instructor. He is accepting new students to start lessons ASAP.
+              Sean is a fully qualified ADI and advanced driver. He is accepting
+              new students to start lessons ASAP.
             </p>
             <p>Sean offers manual lessons.</p>
             <h3>Qualifications</h3>
             <div class="badge-container">
               <badge image-url="/img/iam-roadsmart.svg" />
 
-              <badge image-url="/img/pdi-badge.webp" />
+              <badge image-url="/img/dvsa-badge.webp" />
             </div>
           </instructor>
         </v-col>
