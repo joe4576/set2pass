@@ -6,11 +6,10 @@ type FreeIndexApiResponse = {
 const numberOfReviews = ref(75);
 
 onMounted(async () => {
-  const baseUrl = import.meta.env.VITE_FREEINDEX_API_BASE_URL;
+  const baseUrl = import.meta.env.VITE_FREEINDEX_API_BASE_URL as string;
 
-  const result = await fetch(
-    `${baseUrl}/freeindex/profile(set2pass)_809203.htm`
-  );
+  const url = new URL("/set2pass/review-count", baseUrl);
+  const result = await fetch(url);
 
   if (!result.ok) {
     return;
