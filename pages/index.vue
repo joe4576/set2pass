@@ -53,8 +53,8 @@ useMetadata({
       <v-col cols="auto">
         <p class="text-center">
           🎉 We have a
-          <b>pass rate of 86.2%</b>, from May 2024 - May 2025. The national
-          average in the UK was <b>48.5%</b>! 🎉
+          <b>pass rate of 84%</b>. The national average in the UK is
+          <b>49.9%</b>! 🎉
         </p>
       </v-col>
     </v-row>

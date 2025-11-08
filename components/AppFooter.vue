@@ -78,7 +78,7 @@
       <v-row>
         <v-col cols="12" class="text-center">
           Site created by
-          <a href="https://github.com/joe4576" target="_blank"> Joe Brown </a>
+          <a href="https://joebrown.dev" target="_blank"> Joe Brown </a>
         </v-col>
       </v-row>
     </hero-base>

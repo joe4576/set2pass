@@ -10,10 +10,10 @@
             <p>
               Nikki is the owner of Set2Pass. She is a fully qualified ADI who
               has been teaching students how to drive since 2019. She has an
-              impressive pass rate of 86.2%, compared to the national average of
-              48.5%.
+              impressive pass rate of 84%, compared to the national average of
+              49.9%.
             </p>
-            <p>Nikki offers both manual and automatic driving lessons.</p>
+            <p>Nikki offers automatic driving lessons.</p>
             <h3>Qualifications</h3>
             <div class="badge-container">
               <badge image-url="/img/iam-roadsmart.svg" />
