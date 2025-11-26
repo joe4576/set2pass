@@ -7,8 +7,6 @@ useMetadata({
 </script>
 
 <template>
-  <hero-page-banner title="Pricing" />
-
   <hero-base color="background" class="py-12">
     <div class="d-flex justify-center">
       <icon-card
@@ -29,7 +27,7 @@ useMetadata({
             <span class="text-body-2"> /hour</span>
           </v-col>
         </v-row>
-        <v-row class="justify-center">
+        <v-row class="justify-center mt-0">
           <v-col cols="auto">
             <span class="text-body-2">or </span>
             <span class="text-body-2 font-weight-bold">£60</span>
@@ -37,10 +35,8 @@ useMetadata({
           </v-col>
         </v-row>
         <v-row class="justify-center">
-          <v-col cols="auto">
-            <v-btn color="primary" width="275px" nuxt to="/contact">
-              Book now
-            </v-btn>
+          <v-col cols="12">
+            <v-btn block color="primary" to="/contact"> Book now </v-btn>
           </v-col>
         </v-row>
       </icon-card>

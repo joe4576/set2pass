@@ -18,7 +18,18 @@ defineProps<{
           <h2 class="text-h4">{{ title }}</h2>
         </v-col>
       </v-row>
-      <slot />
+      <v-row class="content mt-10">
+        <slot />
+      </v-row>
     </v-card-text>
   </v-card>
 </template>
+
+<style scoped>
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+</style>

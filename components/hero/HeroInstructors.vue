@@ -25,7 +25,7 @@
             <v-col cols="12" class="my-4">
               <v-divider />
             </v-col>
-            <h3>Additional Qualifications/Certifications</h3>
+            <h3>Additional Qualifications / Certifications</h3>
             <h4>Level 3 Award in Education and Training</h4>
             <p>
               Fundamental understanding of the roles and responsibilities of a
@@ -45,7 +45,7 @@
             </p>
           </instructor>
         </v-col>
-        <v-col cols="12" class="my-8 my-md-4">
+        <v-col cols="12" class="my-8">
           <v-divider />
         </v-col>
         <v-col cols="12">

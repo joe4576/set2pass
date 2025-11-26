@@ -3,12 +3,15 @@
 <template>
   <hero-base v-bind="$attrs">
     <v-row>
-      <v-col cols="12" md="auto" class="d-flex align-center justify-center">
-        <div class="pt-2 d-flex justify-center flex-column">
+      <v-col
+        cols="12"
+        md="auto"
+        class="d-flex align-center justify-center items-center"
+      >
+        <div class="d-flex justify-center align-center flex-column">
           <img src="/img/nikki.webp" class="nikki" alt="Nikki Brown" />
-          <p class="text-subtitle-1 font-weight-bold mb-0">
-            Nikki Brown - Owner
-          </p>
+          <span class="text-subtitle-1 font-weight-bold mt-4">Nikki Brown</span>
+          <span>Owner</span>
         </div>
       </v-col>
       <v-divider v-if="!$vuetify.display.smAndDown" vertical class="ma-5" />

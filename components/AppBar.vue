@@ -83,7 +83,7 @@ watch(showFullMenu, () => {
             <v-btn
               v-if="!item.subMenuItems"
               :key="item.text"
-              class="mx-1"
+              class="text-none"
               :to="item.to"
             >
               {{ item.text }}
@@ -96,7 +96,12 @@ watch(showFullMenu, () => {
               :open-delay="0"
             >
               <template #activator="{ props }">
-                <v-btn v-bind="props" :key="item.text" :to="item.to">
+                <v-btn
+                  v-bind="props"
+                  :key="item.text"
+                  class="text-none"
+                  :to="item.to"
+                >
                   {{ item.text }}
                 </v-btn>
               </template>
@@ -150,10 +155,7 @@ watch(showFullMenu, () => {
               {{ item.text }}
             </v-list-item>
           </template>
-          <!-- First item in the dropdown will be the activator repeated -->
-          <v-list-item :to="item.to" role="option">
-            {{ item.text }}
-          </v-list-item>
+          <v-list-item :to="item.to" role="option"> About </v-list-item>
           <v-list-item
             v-for="subMenu in item.subMenuItems"
             :key="subMenu.to"
