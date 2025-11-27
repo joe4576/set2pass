@@ -6,7 +6,7 @@ interface HeroFeatureProps {
   imagePosition?: "left" | "right";
 }
 
-const { smAndDown, mdAndUp } = useDisplay();
+const { smAndDown } = useDisplay();
 
 const props = withDefaults(defineProps<HeroFeatureProps>(), {
   imagePosition: "left",
@@ -28,13 +28,7 @@ const imageColumnOrder = computed((): number => {
         <img class="feature-img" :src="imageUrl" />
       </v-col>
       <v-col class="d-flex justify-center flex-column" cols="12" md="7">
-        <h3
-          :class="{
-            'text-h3': mdAndUp,
-            'text-h4': smAndDown,
-          }"
-          class="mb-4"
-        >
+        <h3 class="mb-4 text-h4">
           <slot name="title" />
         </h3>
         <slot name="body" />

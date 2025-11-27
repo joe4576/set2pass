@@ -6,7 +6,7 @@ const features: Feature[] = [
     title: "What is DriveClass?",
     imageUrl: "/img/blackbox-1-cropped.webp",
     body: [
-      "DriveClass is an iOS and Android app that displays driving style on a colour coded route map.",
+      "DriveClass is an iOS app that displays driving style on a colour coded route map.",
       "Every manoeuvre is recorded - braking, acceleration and left/right turns.",
     ],
   },
@@ -56,21 +56,6 @@ const appIcons: AppIcon[] = [
     imageUrl: "/img/blackbox-ios.webp",
     text: "DriveClass (iOS)",
   },
-  {
-    href: "https://apps.apple.com/us/app/drive-class/id1496425927",
-    imageUrl: "/img/blackbox-ios-free.webp",
-    text: "DriveClass Demo (free) (iOS)",
-  },
-  {
-    href: "https://play.google.com/store/apps/details?id=me.com.driveadi",
-    imageUrl: "/img/blackbox-android.webp",
-    text: "DriveClass (Android)",
-  },
-  {
-    href: "https://play.google.com/store/apps/details?id=me.com.driveadifree",
-    imageUrl: "/img/blackbox-android-free.webp",
-    text: "DriveClass Demo (free) (Android)",
-  },
 ];
 </script>
 
@@ -82,6 +67,6 @@ const appIcons: AppIcon[] = [
     :app-icons="appIcons"
     description="DriveClass is an app that monitors your driving style and reports how you drove on a detailed map view."
     noun="DriveClass"
-    app-section-title="Find DriveClass on the App Store and Play Store"
+    app-section-title="Find DriveClass on the App Store"
   />
 </template>
