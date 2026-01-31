@@ -18,7 +18,7 @@ jobs:
       - name: Create .env file
         run: |
           echo "FIREBASE_MEASUREMENT_ID=${{ secrets.FIREBASE_MEASUREMENT_ID }}" >> .env
-          echo "VITE_FREEINDEX_API_BASE_URL=${{ secrets.VITE_FREEINDEX_API_BASE_URL }}" >> .env
+          echo "VITE_SET2PASS_API_BASE_URL=${{ secrets.VITE_SET2PASS_API_BASE_URL }}" >> .env
 
       - name: Install dependencies and build
         run: |
