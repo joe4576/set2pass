@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -15,16 +15,14 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
 
-      - name: Create .env file
-        run: |
-          echo "FIREBASE_MEASUREMENT_ID=${{ secrets.FIREBASE_MEASUREMENT_ID }}" >> .env
-          echo "VITE_SET2PASS_API_BASE_URL=${{ secrets.VITE_SET2PASS_API_BASE_URL }}" >> .env
-
       - name: Install dependencies and build
         run: |
           npm ci
-          npx nuxi generate
+          npm run build
 
-      - name: Deploy to Firebase
-        run: |
-          npx firebase-tools deploy --token "${{ secrets.FIREBASE_TOKEN }}" --project set2pass-e6e33 --json
+      - name: Build & Deploy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          quiet: true
