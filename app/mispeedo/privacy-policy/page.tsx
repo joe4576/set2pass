@@ -1,6 +1,5 @@
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import { Terms, TermSection } from "@/components/terms";
+import { TermsHeaderSection } from "@/components/terms/terms-header-section";
+import { Term, TermsListSection } from "@/components/terms/terms-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
     "Privacy Policy for MiSpeedo, covering data collection, usage, and protection.",
 };
 
-const sections: TermSection[] = [
+const terms: Term[] = [
   {
     title: "Policy",
     items: [
@@ -39,14 +38,15 @@ const sections: TermSection[] = [
   },
 ];
 
-export default function TermsPage() {
+export default function MiSpeedoPrivacyPolicy() {
   return (
     <main>
-      <Navbar />
+      <TermsHeaderSection
+        title="Privacy Policy"
+        subtitle="MiSpeedo (“the Service”) collects and uses information only to provide and improve the app. By using the Service, you agree to this policy."
+      />
 
-      <Terms title="Privacy Policy" sections={sections} />
-
-      <Footer />
+      <TermsListSection terms={terms} />
     </main>
   );
 }

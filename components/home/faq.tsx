@@ -1,5 +1,7 @@
 "use client";
 
+import { Section } from "@/components/common/section";
+import { SectionHeader } from "@/components/common/section-header";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +9,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+type Faq = {
+  question: string;
+  answer: string;
+};
+
+const faqs: Faq[] = [
   {
     question: "How much do lessons cost?",
     answer:
@@ -42,34 +49,39 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="mx-auto max-w-3xl px-6 py-24">
-      <div className="text-center">
-        <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-          FAQ
-        </span>
-        <h2
-          className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          Frequently asked questions
-        </h2>
-        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          Everything you need to know about lessons with Set2Pass.
-        </p>
-      </div>
+    <Section id="faq" containerClassName="max-w-3xl">
+      <SectionHeader
+        miniTitle="FAQ"
+        title="Frequently asked questions"
+        subtitle="Everything you need to know about lessons with Set2Pass."
+      />
 
       <Accordion type="single" collapsible className="mt-12">
         {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`item-${i}`}>
-            <AccordionTrigger className="text-left text-base font-medium">
-              {faq.question}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
-              {faq.answer}
-            </AccordionContent>
-          </AccordionItem>
+          <FaqAccordionItem key={faq.question} {...faq} number={i} />
         ))}
       </Accordion>
-    </section>
+    </Section>
   );
 }
+
+type FaqAccordionItemProps = Faq & {
+  number: number;
+};
+
+const FaqAccordionItem = ({
+  question,
+  answer,
+  number,
+}: FaqAccordionItemProps) => {
+  return (
+    <AccordionItem key={number} value={`item-${number}`}>
+      <AccordionTrigger className="text-left text-base font-medium">
+        {question}
+      </AccordionTrigger>
+      <AccordionContent className="text-muted-foreground leading-relaxed">
+        {answer}
+      </AccordionContent>
+    </AccordionItem>
+  );
+};

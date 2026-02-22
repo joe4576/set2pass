@@ -1,6 +1,7 @@
 "use client";
 
-import { Logo } from "@/components/logo";
+import { Container } from "@/components/common/container";
+import { Logo } from "@/components/home/logo";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -20,10 +21,10 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-lg">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <Container as="nav" className="flex justify-between items-center py-4">
         <Logo onClick={() => setMobileOpen(false)} />
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden lg:flex lg:items-center lg:gap-8">
           {navLinks.map((link) =>
             link.href.startsWith("/") && !link.href.startsWith("/#") ? (
               <Link
@@ -52,13 +53,13 @@ export function Navbar() {
         </div>
 
         <button
-          className="flex size-10 items-center justify-center rounded-lg text-foreground lg:hidden hover:cursor-pointer"
+          className="flex justify-center items-center size-10 rounded-lg text-foreground lg:hidden hover:cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
-      </nav>
+      </Container>
 
       {mobileOpen && (
         <div className="border-t border-border bg-background px-6 pb-6 pt-4 lg:hidden">

@@ -1,20 +1,21 @@
+import { Container } from "@/components/common/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero-road.jpg"
           alt="Scenic British road stretching into the distance"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="absolute inset-0 bg-foreground/75" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 py-28 text-center md:py-40">
+      <Container className="relative z-10 flex flex-col items-center py-28 md:py-40 text-center">
         <Badge
           variant="secondary"
           className="mb-6 gap-1.5 rounded-full bg-primary/10 px-4 py-1.5 text-primary-foreground border-primary-foreground/20"
@@ -56,7 +57,7 @@ export function Hero() {
             <a href="#instructors">Meet Our Instructors</a>
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

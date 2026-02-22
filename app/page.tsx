@@ -1,18 +1,15 @@
-import { About } from "@/components/about";
-import { Contact } from "@/components/contact";
-import { ExtraCards } from "@/components/extra-cards";
-import { FAQ } from "@/components/faq";
-import { Footer } from "@/components/footer";
-import { Hero } from "@/components/hero";
-import { Instructors } from "@/components/instructors";
-import { Navbar } from "@/components/navbar";
-import { Stats } from "@/components/stats";
-import { Testimonials } from "@/components/testimonials";
+import { About } from "@/components/home/about";
+import { Contact } from "@/components/home/contact";
+import { ExtraCards } from "@/components/home/extra-cards";
+import { FAQ } from "@/components/home/faq";
+import { Hero } from "@/components/home/hero";
+import { Instructors } from "@/components/home/instructors";
+import { Stats } from "@/components/home/stats";
+import { Testimonials } from "@/components/home/testimonials";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <Hero />
       <Stats />
       <About />
@@ -21,7 +18,6 @@ export default function Home() {
       <Testimonials />
       <ExtraCards />
       <Contact />
-      <Footer />
     </main>
   );
 }

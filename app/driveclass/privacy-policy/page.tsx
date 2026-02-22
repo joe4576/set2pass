@@ -1,6 +1,5 @@
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import { Terms, TermSection } from "@/components/terms";
+import { TermsHeaderSection } from "@/components/terms/terms-header-section";
+import { Term, TermsListSection } from "@/components/terms/terms-section";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
     "Privacy Policy for Set2Pass Driving School, covering data collection, usage, and protection.",
 };
 
-const sections: TermSection[] = [
+const terms: Term[] = [
   {
     title: "Permissions",
     items: [
@@ -30,18 +29,15 @@ const sections: TermSection[] = [
   },
 ];
 
-export default function TermsPage() {
+export default function DriveClassPrivacyPolicy() {
   return (
     <main>
-      <Navbar />
-
-      <Terms
+      <TermsHeaderSection
         title="Privacy Policy"
         subtitle="DriveClass (“the Service”) collects and uses information only to provide and improve the app. By using the Service, you agree to this policy."
-        sections={sections}
       />
 
-      <Footer />
+      <TermsListSection terms={terms} />
     </main>
   );
 }
