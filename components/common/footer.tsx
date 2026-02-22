@@ -1,12 +1,13 @@
 "use client";
 
-import { Logo } from "@/components/logo";
+import { Container } from "@/components/common/container";
+import { Logo } from "@/components/home/logo";
 import Link from "next/link";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row">
+      <Container className="flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
         <Logo />
 
         <div className="flex flex-wrap items-center justify-center gap-6">
@@ -59,7 +60,7 @@ export function Footer() {
             {"\u00A9"} {new Date().getFullYear()} Set2Pass Driving School
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
