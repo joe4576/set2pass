@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/common/container";
-import { Logo } from "@/components/home/logo";
+import { Logo } from "@/components/common/logo";
 import Link from "next/link";
 
 export function Footer() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/common/container";
-import { Logo } from "@/components/home/logo";
+import { Logo } from "@/components/common/logo";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
