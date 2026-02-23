@@ -20,30 +20,23 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-lg">
-      <Container as="nav" className="flex justify-between items-center py-4">
+    <header className="sticky top-0 z-50 w-full">
+      <Container
+        as="nav"
+        className="flex justify-between items-center py-4 border-b border-border bg-background/80 backdrop-blur-lg relative"
+      >
         <Logo onClick={() => setMobileOpen(false)} />
 
         <div className="hidden lg:flex lg:items-center lg:gap-8">
-          {navLinks.map((link) =>
-            link.href.startsWith("/") && !link.href.startsWith("/#") ? (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </a>
-            ),
-          )}
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         <div className="hidden lg:block">
@@ -62,30 +55,24 @@ export function Navbar() {
       </Container>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-background px-6 pb-6 pt-4 lg:hidden">
-          <div className="flex flex-col gap-4">
-            {navLinks.map((link) =>
-              link.href.startsWith("/") && !link.href.startsWith("/#") ? (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground py-2"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground py-2"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ),
-            )}
+        <div className="absolute top-full left-0 w-full h-screen overflow-y-hidden lg:hidden">
+          <div className="flex flex-col bg-background/90 backdrop-blur-lg">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground p-6 border-b border-border"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
+
+          <div
+            className="grow size-full bg-black/5 backdrop-blur-xs"
+            onClick={() => setMobileOpen(false)}
+          ></div>
         </div>
       )}
     </header>
