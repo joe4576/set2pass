@@ -25,8 +25,8 @@ const stats: Stat[] = [
   },
   {
     Icon: PoundSterling,
-    value: "£60",
-    label: "Per Lesson",
+    value: "£40",
+    label: "Per Hour",
     detail: "5% off when you book 10 lessons",
   },
   {

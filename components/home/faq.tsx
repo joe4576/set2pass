@@ -18,7 +18,7 @@ const faqs: Faq[] = [
   {
     question: "How much do lessons cost?",
     answer:
-      "Nikki and Sean charge £60 per lesson. We also offer a 5% discount if you book 10 lessons in advance.",
+      "Nikki and Sean charge £40 per hour, and each lesson is 90 minutes. We also offer a 5% discount if you book 10 lessons in advance.",
   },
   {
     question: "Do you offer automatic lessons?",
