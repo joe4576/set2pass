@@ -19,11 +19,8 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <Container
-        as="nav"
-        className="flex justify-between items-center py-4 border-b border-border bg-background/80 backdrop-blur-lg relative"
-      >
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
+      <Container as="nav" className="flex justify-between items-center py-4">
         <Logo onClick={() => setMobileOpen(false)} />
 
         <div className="hidden lg:flex lg:items-center lg:gap-8">
@@ -54,8 +51,8 @@ export function Navbar() {
       </Container>
 
       {mobileOpen && (
-        <div className="absolute top-full left-0 w-full h-screen overflow-y-hidden lg:hidden">
-          <div className="flex flex-col bg-background/90 backdrop-blur-lg">
+        <div className="absolute top-[calc(100%+1px)] left-0 w-full h-screen overflow-y-hidden lg:hidden">
+          <div className="flex flex-col bg-white">
             {navLinks.map((link) => (
               <a
                 key={link.href}
