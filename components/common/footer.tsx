@@ -2,7 +2,6 @@
 
 import { Container } from "@/components/common/container";
 import { Logo } from "@/components/common/logo";
-import Link from "next/link";
 
 export function Footer() {
   return (
@@ -35,27 +34,27 @@ export function Footer() {
           >
             Reviews
           </a>
-          <Link
+          <a
             href="/driveclass"
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             DriveClass
-          </Link>
-          <Link
+          </a>
+          <a
             href="/mispeedo"
             className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             MiSpeedo
-          </Link>
+          </a>
         </div>
 
         <div className="flex flex-col items-center gap-1.5 sm:items-end">
-          <Link
+          <a
             href="/terms"
             className="text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-foreground"
           >
             Terms and Conditions
-          </Link>
+          </a>
           <p className="text-center text-xs text-muted-foreground">
             {"\u00A9"} {new Date().getFullYear()} Set2Pass Driving School
           </p>

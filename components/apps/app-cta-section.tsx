@@ -2,7 +2,6 @@ import { AppleIcon } from "@/components/apps/apple-icon";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 type AppCtaSectionProps = {
   title: string;
@@ -33,12 +32,12 @@ export const AppCtaSection = ({
       </div>
 
       <div className="mt-8">
-        <Link
+        <a
           href={privacyPolicyLink}
           className="text-sm font-medium text-primary mt-8 underline"
         >
           View privacy policy
-        </Link>
+        </a>
       </div>
     </Section>
   );

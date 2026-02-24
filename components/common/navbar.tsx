@@ -4,7 +4,6 @@ import { Container } from "@/components/common/container";
 import { Logo } from "@/components/common/logo";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
@@ -29,13 +28,13 @@ export function Navbar() {
 
         <div className="hidden lg:flex lg:items-center lg:gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -58,14 +57,14 @@ export function Navbar() {
         <div className="absolute top-full left-0 w-full h-screen overflow-y-hidden lg:hidden">
           <div className="flex flex-col bg-background/90 backdrop-blur-lg">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground p-6 border-b border-border"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
 
