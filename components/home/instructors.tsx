@@ -2,6 +2,7 @@ import { Card } from "@/components/common/card";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { Badge } from "@/components/ui/badge";
+import { passRates } from "@/lib/constants";
 import { Award, GraduationCap } from "lucide-react";
 
 type Instructor = {
@@ -19,7 +20,7 @@ const instructors: Instructor[] = [
     role: "Owner & Instructor",
     type: "Automatic",
     image: "/images/nikki.webp",
-    bio: "Nikki is the owner of Set2Pass. She is a fully qualified ADI and advanced driver who has been teaching students how to drive since 2019. She has an impressive pass rate of 84%, compared to the national average of 49.9%.",
+    bio: `Nikki is the owner of Set2Pass. She is a fully qualified ADI and advanced driver who has been teaching students how to drive since 2019. She has an impressive pass rate of ${passRates.nikki}, compared to the national average of ${passRates.nationalAverage}.`,
     qualifications: [
       "Approved Driving Instructor (ADI)",
       "iAM Advanced Driver",

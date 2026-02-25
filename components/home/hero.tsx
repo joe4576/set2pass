@@ -1,6 +1,7 @@
 import { Container } from "@/components/common/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { passRates } from "@/lib/constants";
 import { ArrowRight, Star } from "lucide-react";
 
 export function Hero() {
@@ -21,7 +22,10 @@ export function Hero() {
           className="mb-6 gap-1.5 rounded-full bg-primary/10 px-4 py-1.5 text-primary-foreground border-primary-foreground/20"
         >
           <Star className="size-3.5 fill-current" />
-          <span>84% pass rate vs 49.9% national average</span>
+          <span>
+            {passRates.nikki} pass rate vs {passRates.nationalAverage} national
+            average
+          </span>
         </Badge>
 
         <h1

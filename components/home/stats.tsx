@@ -1,5 +1,6 @@
 import { Card } from "@/components/common/card";
 import { Container } from "@/components/common/container";
+import { passRates } from "@/lib/constants";
 import { Clock, MapPin, PoundSterling, Trophy } from "lucide-react";
 import { ElementType } from "react";
 
@@ -13,9 +14,9 @@ type Stat = {
 const stats: Stat[] = [
   {
     Icon: Trophy,
-    value: "84%",
+    value: passRates.nikki,
     label: "Pass Rate",
-    detail: "vs 49.9% national average",
+    detail: `vs ${passRates.nationalAverage} national average`,
   },
   {
     Icon: Clock,
