@@ -29,7 +29,10 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={cn(dmSans.variable, inter.variable)}>
+    <html
+      lang="en"
+      className={cn(dmSans.variable, inter.variable, "scroll-smooth")}
+    >
       <body className="font-sans antialiased">
         <ReviewCountProvider>
           <Navbar />

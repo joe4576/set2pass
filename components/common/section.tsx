@@ -18,7 +18,10 @@ export const Section = ({
   containerClassName,
 }: SectionProps) => {
   return (
-    <section id={id} className={cn("py-20", muted && "bg-muted/50", className)}>
+    <section
+      id={id}
+      className={cn("py-20 scroll-my-16", muted && "bg-muted/50", className)}
+    >
       <Container className={containerClassName}>{children}</Container>
     </section>
   );
