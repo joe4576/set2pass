@@ -48,12 +48,18 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col items-center gap-1.5 sm:items-end">
+        <div className="flex flex-col items-center gap-2 sm:items-end">
           <a
             href="/terms"
             className="text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-foreground"
           >
             Terms and Conditions
+          </a>
+          <a
+            href="/privacy-policy"
+            className="text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-foreground"
+          >
+            Privacy Policy
           </a>
           <p className="text-center text-xs text-muted-foreground">
             {"\u00A9"} {new Date().getFullYear()} Set2Pass Driving School
