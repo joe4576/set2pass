@@ -1,7 +1,7 @@
+import { NoteCard } from "@/components/terms/note-card";
 import { TermsHeaderSection } from "@/components/terms/terms-header-section";
 import { Term, TermsListSection } from "@/components/terms/terms-section";
 import type { Metadata } from "next";
-import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Terms and Conditions | Set2Pass",
@@ -161,15 +161,3 @@ export default function TermsAndConditions() {
     </main>
   );
 }
-
-type NoteCardProps = {
-  children: ReactNode;
-};
-
-const NoteCard = ({ children }: NoteCardProps) => {
-  return (
-    <div className="rounded-2xl border border-border bg-muted/30 p-6 text-muted-foreground text-sm">
-      {children}
-    </div>
-  );
-};
