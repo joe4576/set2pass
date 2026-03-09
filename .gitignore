@@ -3,3 +3,4 @@ dist
 .wrangler
 .next
 .DS_Store
+.env.*
