@@ -6,7 +6,7 @@ import { Logo } from "@/components/common/logo";
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
-      <Container className="flex flex-col items-center justify-between gap-6 py-10 sm:flex-row">
+      <Container className="flex flex-col items-center justify-between gap-6 py-10 lg:flex-row">
         <Logo />
 
         <div className="flex flex-wrap items-center justify-center gap-6">
@@ -48,7 +48,7 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col items-center gap-2 sm:items-end">
+        <div className="flex flex-col items-center lg:items-end gap-3 lg:gap-2">
           <a
             href="/terms"
             className="text-xs text-muted-foreground underline underline-offset-2 transition-colors hover:text-foreground"
@@ -61,7 +61,7 @@ export function Footer() {
           >
             Privacy Policy
           </a>
-          <p className="text-center text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground">
             {"\u00A9"} {new Date().getFullYear()} Set2Pass Driving School
           </p>
         </div>
