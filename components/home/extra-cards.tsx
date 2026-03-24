@@ -21,7 +21,7 @@ const FreeIndexCard = () => {
   const reviewCount = useReviewCount();
 
   return (
-    <Card className="bg-primary/5">
+    <Card>
       <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-primary/10">
         <Award className="size-6 text-primary" />
       </div>
@@ -48,7 +48,11 @@ const FreeIndexCard = () => {
         instruction that gets results.
       </p>
 
-      <Button asChild variant="outline" className="mt-6 rounded-full">
+      <Button
+        asChild
+        variant="outline"
+        className="mt-6 rounded-full bg-primary/5"
+      >
         <a
           href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
           target="_blank"
@@ -64,7 +68,7 @@ const FreeIndexCard = () => {
 
 const TheoryTestProCard = () => {
   return (
-    <Card className="bg-primary/5">
+    <Card>
       <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-primary/15">
         <BookOpen className="size-6 text-primary" />
       </div>
