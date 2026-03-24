@@ -11,24 +11,26 @@ export const metadata: Metadata = {
 
 const terms: Term[] = [
   {
-    title: "No Cookie Banner Required",
+    title: "Cookies and Analytics",
     items: [
-      'We do not use tracking cookies for advertising, marketing, or profiling. Because we do not store or access any non-essential information on your device, we do not show a "Cookie Consent" pop-up. We respect your privacy from the moment you land on our site.',
+      "We use cookies and similar technologies to understand how visitors use our website and to measure page views and site performance.",
+      "These cookies are used only for website analytics and are not used for advertising, marketing, or cross-site tracking.",
+      "You can control or disable cookies through your browser settings at any time. If you disable cookies, some analytics features may not work as intended.",
     ],
   },
   {
-    title: "Anonymous Analytics (PostHog)",
+    title: "Website Usage Data",
     items: [
-      "How it works: We do not save any files (cookies) to your browser. Instead, we use a privacy-preserving method to count page visits anonymously.",
-      `True Anonymity: We do not collect your IP address, your name, or any data that could identify who you are. We see "trends" (e.g., 50 people visited the 'Contact' page today), but we never see "people."`,
-      "Data Deletion: Because the data we collect via PostHog is entirely anonymous and is never linked to your identity, it is technically impossible for us to identify or delete records relating to your specific visit.",
-      "No Third-Party Sharing: This data is for our use only. We never sell this information or share it with platforms like Meta, Google, or TikTok.",
+      "We may collect information such as page visits, device and browser information, and approximate location based on your IP address.",
+      "We use this information only to improve our website and understand how it is used.",
+      "We do not use this data to build advertising profiles or to track you across other websites.",
     ],
   },
   {
-    title: "Our Commitment",
+    title: "Your Choice",
     items: [
-      'We do not participate in cross-site tracking, "fingerprinting," or any other form of invasive digital surveillance. Our website is built to provide information about our local business without compromising your privacy.',
+      "You can opt out of analytics cookies by adjusting your browser settings to block or delete cookies.",
+      "If you disable cookies, you may still be able to use the website, but some features may be limited.",
     ],
   },
 ];
@@ -36,11 +38,7 @@ const terms: Term[] = [
 export default function PrivacyPolicy() {
   return (
     <main>
-      <TermsHeaderSection
-        title="Privacy Policy"
-        subtitle="At Set2Pass, we believe that tracking our customers is unnecessary. Because we are a local business serving the UK, we have designed our website to be private by default."
-        lastUpdated="09 March 2026"
-      />
+      <TermsHeaderSection title="Privacy Policy" lastUpdated="24 March 2026" />
 
       <TermsListSection
         terms={terms}
