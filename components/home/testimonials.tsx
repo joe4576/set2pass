@@ -52,15 +52,22 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export function Testimonials() {
+export const Testimonials = () => {
   const reviewCount = useReviewCount();
 
   return (
-    <Section id="reviews" muted>
+    <Section id="reviews">
       <SectionHeader
-        miniTitle="Reviews"
         title="What our students say"
-        subtitle={`Rated 5 stars with ${reviewCount} reviews on FreeIndex. Here are some of our favourites.`}
+        subtitle={
+          <p className="text-muted-foreground">
+            We're rated 5 stars with{" "}
+            <span className="text-primary font-bold">
+              {reviewCount} reviews
+            </span>{" "}
+            on FreeIndex. Here are some of our favourites.
+          </p>
+        }
       />
 
       <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -68,14 +75,25 @@ export function Testimonials() {
           <TestimonialCard key={testimonial.name} {...testimonial} />
         ))}
       </div>
+
+      <div className="flex justify-center items-center mt-20 mx-auto">
+        <a
+          href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link"
+        >
+          Read more reviews on FreeIndex
+        </a>
+      </div>
     </Section>
   );
-}
+};
 
 const TestimonialCard = ({ name, instructor, text, img }: Testimonial) => {
   return (
     <Card className="flex flex-col">
-      <Quote className="mb-4 size-8 text-primary/20" />
+      <Quote className="mb-4 size-8 text-primary/50" />
 
       <p className="flex-1 leading-relaxed text-muted-foreground">{text}</p>
 

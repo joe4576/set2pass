@@ -3,10 +3,10 @@
 import { Container } from "@/components/common/container";
 import { Logo } from "@/components/common/logo";
 
-export function Footer() {
+export const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card">
-      <Container className="flex flex-col items-center justify-between gap-6 py-10 lg:flex-row">
+    <footer className="bg-white">
+      <Container className="flex flex-col items-center justify-between gap-10 py-10 lg:flex-row">
         <Logo />
 
         <div className="flex flex-wrap items-center justify-center gap-6">
@@ -68,4 +68,4 @@ export function Footer() {
       </Container>
     </footer>
   );
-}
+};

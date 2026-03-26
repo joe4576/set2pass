@@ -1,12 +1,11 @@
-import { Card } from "@/components/common/card";
 import { Section } from "@/components/common/section";
 import { Button } from "@/components/ui/button";
 import { Facebook, Mail, Phone } from "lucide-react";
 
-export function Contact() {
+export const Contact = () => {
   return (
-    <Section id="contact" muted>
-      <Card className="bg-primary p-10 text-center md:p-16">
+    <Section id="contact" className="bg-primary">
+      <div className="text-center">
         <h2
           className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
@@ -53,7 +52,7 @@ export function Contact() {
             </a>
           </Button>
         </div>
-      </Card>
+      </div>
     </Section>
   );
-}
+};

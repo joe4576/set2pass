@@ -1,10 +1,8 @@
 import { Container } from "@/components/common/container";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { passRates } from "@/lib/constants";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-export function Hero() {
+export const Hero = () => {
   return (
     <section className="relative">
       <div className="absolute inset-0 z-0">
@@ -17,28 +15,17 @@ export function Hero() {
       </div>
 
       <Container className="relative z-10 flex flex-col items-center py-28 md:py-40 text-center">
-        <Badge
-          variant="secondary"
-          className="mb-6 gap-1.5 rounded-full bg-primary/10 px-4 py-1.5 text-primary-foreground border-primary-foreground/20"
-        >
-          <Star className="size-3.5 fill-current" />
-          <span>
-            {passRates.nikki} pass rate vs {passRates.nationalAverage} national
-            average
-          </span>
-        </Badge>
-
         <h1
-          className="max-w-3xl text-balance text-4xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
+          className="max-w-3xl text-balance text-5xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Learn to drive with confidence
+          Learn to drive with Set2Pass
         </h1>
 
         <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-primary-foreground/80">
           Professional driving lessons in Locks Heath and surrounding areas.
           Tailored instruction for every learner, from complete beginners to
-          those looking to pass.
+          those looking to build their confidence.
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-6">
@@ -64,4 +51,4 @@ export function Hero() {
       </Container>
     </section>
   );
-}
+};

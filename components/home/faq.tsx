@@ -47,12 +47,11 @@ const faqs: Faq[] = [
   },
 ];
 
-export function FAQ() {
+export const FAQ = () => {
   return (
-    <Section id="faq" containerClassName="max-w-3xl">
+    <Section id="faq" containerClassName="max-w-3xl" muted>
       <SectionHeader
-        miniTitle="FAQ"
-        title="Frequently asked questions"
+        title="Frequently Asked Questions"
         subtitle="Everything you need to know about lessons with Set2Pass."
       />
 
@@ -63,7 +62,7 @@ export function FAQ() {
       </Accordion>
     </Section>
   );
-}
+};
 
 type FaqAccordionItemProps = Faq & {
   number: number;

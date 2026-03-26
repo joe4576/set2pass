@@ -1,9 +1,10 @@
-import { Card } from "@/components/common/card";
+import { Divider } from "@/components/common/divider";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
 import { Badge } from "@/components/ui/badge";
 import { passRates } from "@/lib/constants";
 import { Award, GraduationCap } from "lucide-react";
+import { Fragment } from "react/jsx-runtime";
 
 type Instructor = {
   name: string;
@@ -42,23 +43,25 @@ const instructors: Instructor[] = [
   },
 ];
 
-export function Instructors() {
+export const Instructors = () => {
   return (
-    <Section id="instructors" muted>
+    <Section id="instructors">
       <SectionHeader
-        miniTitle="Our Team"
-        title="Meet your instructors"
+        title="Our instructors"
         subtitle="Our friendly, patient instructors are dedicated to helping you become a safe, confident driver."
       />
 
-      <div className="grid gap-8 lg:grid-cols-2">
-        {instructors.map((instructor) => (
-          <InstructorCard key={instructor.name} {...instructor} />
+      <div className="flex flex-col gap-20 max-w-2xl mx-auto">
+        {instructors.map((instructor, idx, arr) => (
+          <Fragment key={instructor.name}>
+            <InstructorCard {...instructor} />
+            {idx !== arr.length - 1 && <Divider />}
+          </Fragment>
         ))}
       </div>
     </Section>
   );
-}
+};
 
 const InstructorCard = ({
   bio,
@@ -69,45 +72,41 @@ const InstructorCard = ({
   type,
 }: Instructor) => {
   return (
-    <Card>
-      <div className="flex flex-col gap-6">
-        <div className="flex items-start gap-5">
-          <img src={image} alt={name} className="size-24 rounded-lg" />
+    <div className="flex flex-col gap-6">
+      <div className="flex gap-5">
+        <img src={image} alt={name} className="size-24 rounded-lg" />
 
-          <div className="my-auto">
-            <h3
-              className="text-xl font-bold text-foreground"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              {name}
-            </h3>
+        <div className="my-auto">
+          <h3
+            className="text-xl font-bold text-foreground"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            {name}
+          </h3>
 
-            <p className="mt-0.5 text-sm text-muted-foreground">{role}</p>
+          <p className="mt-0.5 text-sm text-muted-foreground">{role}</p>
 
-            <Badge variant="secondary" className="mt-2">
-              {type} Lessons
-            </Badge>
-          </div>
-        </div>
-
-        <p className="leading-relaxed text-muted-foreground">{bio}</p>
-
-        <div>
-          <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
-            <GraduationCap className="size-4 text-primary" />
-            Qualifications
-          </h4>
-
-          <ul className="space-y-2">
-            {qualifications.map((qual) => (
-              <li key={qual} className="flex items-center gap-2.5">
-                <Award className="size-3.5 shrink-0 text-primary" />
-                <span className="text-sm text-muted-foreground">{qual}</span>
-              </li>
-            ))}
-          </ul>
+          <Badge className="mt-2">{type}</Badge>
         </div>
       </div>
-    </Card>
+
+      <p className="leading-relaxed text-muted-foreground">{bio}</p>
+
+      <div>
+        <h4 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
+          <GraduationCap className="size-4 text-primary" />
+          Qualifications
+        </h4>
+
+        <ul className="space-y-2">
+          {qualifications.map((qual) => (
+            <li key={qual} className="flex items-center gap-2.5">
+              <Award className="size-3.5 shrink-0 text-primary" />
+              <span className="text-sm text-muted-foreground">{qual}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };

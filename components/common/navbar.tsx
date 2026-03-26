@@ -15,11 +15,11 @@ const navLinks = [
   { href: "/mispeedo", label: "MiSpeedo" },
 ];
 
-export function Navbar() {
+export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
+    <header className="sticky top-0 z-50 w-full bg-white shadow-xs">
       <Container as="nav" className="flex justify-between items-center py-4">
         <Logo onClick={() => setMobileOpen(false)} />
 
@@ -28,7 +28,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:underline"
             >
               {link.label}
             </a>
@@ -37,7 +37,7 @@ export function Navbar() {
 
         <div className="hidden lg:block">
           <Button asChild size="lg">
-            <a href="/#contact">Get in Touch</a>
+            <a href="/#contact">Contact us</a>
           </Button>
         </div>
 
@@ -51,7 +51,7 @@ export function Navbar() {
       </Container>
 
       {mobileOpen && (
-        <div className="absolute top-[calc(100%+1px)] left-0 w-full h-screen overflow-y-hidden lg:hidden">
+        <div className="absolute top-full left-0 border-t border-border w-full h-screen overflow-y-hidden lg:hidden">
           <div className="flex flex-col bg-white">
             {navLinks.map((link) => (
               <a
@@ -73,4 +73,4 @@ export function Navbar() {
       )}
     </header>
   );
-}
+};
