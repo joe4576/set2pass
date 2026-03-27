@@ -11,10 +11,29 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
+const title = "Set2Pass Driving School | Learn to Drive in Locks Heath";
+const description =
+  "Professional driving lessons in Locks Heath and surrounding areas. Automatic and manual lessons available.";
+const url = "https://set2pass.co.uk";
+
 export const metadata: Metadata = {
-  title: "Set2Pass Driving School | Learn to Drive in Locks Heath",
-  description:
-    "Professional driving lessons in Locks Heath and surrounding areas. Automatic and manual lessons available.",
+  metadataBase: new URL(url),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url,
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Set2Pass preview image",
+      },
+    ],
+  },
   icons: {
     icon: [
       {
