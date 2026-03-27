@@ -28,13 +28,13 @@ const stats: Stat[] = [
   {
     Icon: MapPin,
     value: "Locks Heath",
-    label: "Coverage Area",
+    label: "& surrounding areas",
   },
 ];
 
 export const Stats = () => {
   return (
-    <Section className="py-16">
+    <Section className="py-16 md:py-10">
       <div className="flex justify-around items-center gap-10 flex-wrap max-w-4xl mx-auto">
         {stats.map((stat) => (
           <StatCard key={stat.label} {...stat} />

@@ -2,17 +2,23 @@
 
 import { Container } from "@/components/common/container";
 import { Logo } from "@/components/common/logo";
+import { NavLink } from "@/components/common/nav-link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const navLinks = [
+export const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#instructors", label: "Instructors" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#reviews", label: "Reviews" },
   { href: "/driveclass", label: "DriveClass" },
   { href: "/mispeedo", label: "MiSpeedo" },
+];
+
+const mobileNavLinks = [
+  ...navLinks,
+  { href: "/#contact", label: "Contact us" },
 ];
 
 export const Navbar = () => {
@@ -25,13 +31,9 @@ export const Navbar = () => {
 
         <div className="hidden lg:flex lg:items-center lg:gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:underline"
-            >
+            <NavLink key={link.href} href={link.href}>
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </div>
 
@@ -53,7 +55,7 @@ export const Navbar = () => {
       {mobileOpen && (
         <div className="absolute top-full left-0 border-t border-border w-full h-screen overflow-y-hidden lg:hidden">
           <div className="flex flex-col bg-white">
-            {navLinks.map((link) => (
+            {mobileNavLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}

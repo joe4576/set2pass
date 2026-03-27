@@ -2,6 +2,8 @@
 
 import { Container } from "@/components/common/container";
 import { Logo } from "@/components/common/logo";
+import { NavLink } from "@/components/common/nav-link";
+import { navLinks } from "@/components/common/navbar";
 
 export const Footer = () => {
   return (
@@ -10,42 +12,11 @@ export const Footer = () => {
         <Logo />
 
         <div className="flex flex-wrap items-center justify-center gap-6">
-          <a
-            href="/#about"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            About
-          </a>
-          <a
-            href="/#instructors"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Instructors
-          </a>
-          <a
-            href="/#faq"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            FAQ
-          </a>
-          <a
-            href="/#reviews"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Reviews
-          </a>
-          <a
-            href="/driveclass"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            DriveClass
-          </a>
-          <a
-            href="/mispeedo"
-            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            MiSpeedo
-          </a>
+          {navLinks.map((link) => (
+            <NavLink key={link.href} href={link.href}>
+              {link.label}
+            </NavLink>
+          ))}
         </div>
 
         <div className="flex flex-col items-center lg:items-end gap-3 lg:gap-2">
