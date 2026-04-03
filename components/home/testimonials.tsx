@@ -3,6 +3,7 @@
 import { Card } from "@/components/common/card";
 import { Section } from "@/components/common/section";
 import { SectionHeader } from "@/components/common/section-header";
+import { freeIndexLink } from "@/lib/constants";
 import { useReviewCount } from "@/providers/review-count-provider";
 import { Quote, Star } from "lucide-react";
 
@@ -62,9 +63,14 @@ export const Testimonials = () => {
         subtitle={
           <p className="text-muted-foreground">
             We're rated 5 stars with{" "}
-            <span className="text-primary font-bold">
+            <a
+              href={freeIndexLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
               {reviewCount} reviews
-            </span>{" "}
+            </a>{" "}
             on FreeIndex. Here are some of our favourites.
           </p>
         }
@@ -78,7 +84,7 @@ export const Testimonials = () => {
 
       <div className="flex justify-center items-center mt-20 mx-auto">
         <a
-          href="https://www.freeindex.co.uk/profile(set2pass)_809203.htm"
+          href={freeIndexLink}
           target="_blank"
           rel="noopener noreferrer"
           className="link"
