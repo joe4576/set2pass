@@ -62,16 +62,20 @@ export const Testimonials = () => {
         title="What our students say"
         subtitle={
           <p className="text-muted-foreground">
-            We're rated 5 stars with{" "}
+            We're rated 5 ⭐️ with{" "}
+            <strong className="text-xl font-bold tabular-nums text-primary">
+              {reviewCount}
+            </strong>{" "}
+            reviews on{" "}
             <a
               href={freeIndexLink}
               target="_blank"
               rel="noopener noreferrer"
               className="link"
             >
-              {reviewCount} reviews
-            </a>{" "}
-            on FreeIndex. Here are some of our favourites.
+              FreeIndex
+            </a>
+            . Here are some of our favourites.
           </p>
         }
       />
@@ -80,17 +84,6 @@ export const Testimonials = () => {
         {testimonials.map((testimonial) => (
           <TestimonialCard key={testimonial.name} {...testimonial} />
         ))}
-      </div>
-
-      <div className="flex justify-center items-center mt-20 mx-auto">
-        <a
-          href={freeIndexLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="link"
-        >
-          Read more reviews on FreeIndex
-        </a>
       </div>
     </Section>
   );
