@@ -98,7 +98,7 @@ const TestimonialCard = ({ name, instructor, text, img }: Testimonial) => {
 
       <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
         <div className="flex gap-4 items-center">
-          <img src={img} className="size-12 rounded-full" />
+          <img src={img} alt="" className="size-12 rounded-full" />
 
           <div>
             <p className="text-sm font-semibold text-foreground">{name}</p>

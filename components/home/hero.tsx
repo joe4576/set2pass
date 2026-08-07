@@ -7,7 +7,7 @@ export const Hero = () => {
     <section className="relative">
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-road.jpg"
+          src="/images/hero-road.webp"
           alt="Scenic British road stretching into the distance"
           className="h-full w-full object-cover"
         />

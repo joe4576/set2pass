@@ -12,7 +12,7 @@ export const Contact = () => {
         >
           Ready to start your driving journey?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-primary-foreground/80">
+        <p className="mx-auto mt-4 max-w-xl text-primary-foreground">
           Get in touch today to join our waiting list. We offer automatic
           lessons with Nikki and manual lessons with Sean.
         </p>

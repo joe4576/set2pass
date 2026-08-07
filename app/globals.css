@@ -75,5 +75,10 @@
 }
 
 .link {
-  @apply text-primary/80 font-semibold underline hover:text-primary transition-colors;
+  @apply text-primary font-semibold underline transition-colors;
+}
+
+:focus-visible {
+  outline: 3px solid black;
+  outline-offset: 3px;
 }
