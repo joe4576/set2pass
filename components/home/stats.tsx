@@ -1,5 +1,5 @@
 import { Section } from "@/components/common/section";
-import { passRates } from "@/lib/constants";
+import { passRates, prices } from "@/lib/constants";
 import { Clock, MapPin, PoundSterling, Trophy } from "lucide-react";
 import { ElementType } from "react";
 
@@ -22,7 +22,7 @@ const stats: Stat[] = [
   },
   {
     Icon: PoundSterling,
-    value: "£40",
+    value: prices.hourly,
     label: "Per Hour",
   },
   {

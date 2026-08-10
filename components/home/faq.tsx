@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { prices } from "@/lib/constants";
 
 type Faq = {
   question: string;
@@ -17,8 +18,7 @@ type Faq = {
 const faqs: Faq[] = [
   {
     question: "How much do lessons cost?",
-    answer:
-      "Nikki and Sean charge £40 per hour, and each lesson is 90 minutes. We also offer a 5% discount if you book 10 lessons in advance.",
+    answer: `Nikki and Sean charge ${prices.hourly} per hour, and each lesson is 90 minutes. We also offer a 5% discount if you book 10 lessons in advance.`,
   },
   {
     question: "Do you offer automatic lessons?",
