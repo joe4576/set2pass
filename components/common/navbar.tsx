@@ -19,6 +19,7 @@ export const navLinks = [
 const mobileNavLinks = [
   ...navLinks,
   { href: "/#contact", label: "Contact us" },
+  { href: "/terms", label: "Terms and conditions" },
 ];
 
 export const Navbar = () => {
