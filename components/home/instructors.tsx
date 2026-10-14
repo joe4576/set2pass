@@ -23,11 +23,12 @@ const instructors: Instructor[] = [
     image: "/images/nikki.webp",
     bio: `Nikki is the owner of Set2Pass. She is a fully qualified ADI and advanced driver who has been teaching students how to drive since 2019. She has an impressive pass rate of ${passRates.nikki}, compared to the national average of ${passRates.nationalAverage}.`,
     qualifications: [
+      "The Disability Driving Instructors Disabilities and Medical Conditions Course",
+      "Level 3 Award in Education and Training",
+      "Driving Instructors Association Diploma in Driver Education (DipDE)",
       "Approved Driving Instructor (ADI)",
       "iAM Advanced Driver",
       "Pass Plus Certified",
-      "Level 3 Award in Education and Training",
-      "Driving Instructors Association Diploma in Driver Education (DipDE)",
     ],
   },
   {

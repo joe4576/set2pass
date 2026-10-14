@@ -1,4 +1,5 @@
 import { Section } from "@/components/common/section";
+import { InfoTooltip } from "@/components/common/info-tooltip";
 import { passRates, prices } from "@/lib/constants";
 import { Clock, MapPin, PoundSterling, Trophy } from "lucide-react";
 import { ElementType } from "react";
@@ -7,6 +8,7 @@ type Stat = {
   Icon: ElementType;
   value: string;
   label: string;
+  tooltip?: string;
 };
 
 const stats: Stat[] = [
@@ -14,6 +16,7 @@ const stats: Stat[] = [
     Icon: Trophy,
     value: passRates.nikki,
     label: "Pass Rate",
+    tooltip: `${passRates.nikki}, based on DVSA data for the preceding 12-month reporting period`,
   },
   {
     Icon: Clock,
@@ -44,7 +47,7 @@ export const Stats = () => {
   );
 };
 
-const StatCard = ({ label, value, Icon }: Stat) => {
+const StatCard = ({ label, value, Icon, tooltip }: Stat) => {
   return (
     <div className="flex flex-col items-center text-center w-48">
       <div className="flex justify-center items-center mb-2">
@@ -58,7 +61,9 @@ const StatCard = ({ label, value, Icon }: Stat) => {
         {value}
       </span>
 
-      <span className="mt-1 text-sm font-medium text-foreground">{label}</span>
+      <span className="mt-1 text-sm font-medium text-foreground">
+        {tooltip ? <InfoTooltip label={label} text={tooltip} /> : label}
+      </span>
     </div>
   );
 };
