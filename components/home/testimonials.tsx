@@ -1,20 +1,16 @@
 "use client";
 
-import { Card } from "@/components/common/card";
-import { Section } from "@/components/common/section";
-import { SectionHeader } from "@/components/common/section-header";
+import {
+  StudentReview,
+  type StudentReviewProps,
+} from "@/components/home/student-review";
+import { TextLink } from "@/components/shared/text-link";
+import { Section } from "@/components/shared/section";
+import { SectionHeader } from "@/components/shared/section-header";
 import { freeIndexLink } from "@/lib/constants";
 import { useReviewCount } from "@/providers/review-count-provider";
-import { Quote, Star } from "lucide-react";
 
-type Testimonial = {
-  name: string;
-  instructor: string;
-  text: string;
-  img: string;
-};
-
-const testimonials: Testimonial[] = [
+const testimonials: StudentReviewProps[] = [
   {
     name: "Chloe",
     instructor: "Nikki",
@@ -55,65 +51,40 @@ const testimonials: Testimonial[] = [
 
 export const Testimonials = () => {
   const reviewCount = useReviewCount();
-
   return (
-    <Section id="reviews">
-      <SectionHeader
-        title="What our students say"
-        subtitle={
-          <p className="text-muted-foreground">
-            We're rated 5 ⭐️ with{" "}
-            <strong className="text-xl font-bold tabular-nums text-primary">
-              {reviewCount}
-            </strong>{" "}
-            reviews on{" "}
-            <a
-              href={freeIndexLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              FreeIndex
-            </a>
-            . Here are some of our favourites.
-          </p>
-        }
-      />
-
-      <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <Section id="reviews" muted spacing="spacious">
+      <div className="mb-7 min-[1000px]:flex min-[1000px]:items-baseline min-[1000px]:justify-between min-[1000px]:gap-[30px]">
+        <SectionHeader
+          className="mb-4 min-[1000px]:m-0"
+          title="What our students say"
+        />
+        <p className="text-[16px]">
+          Rated 5 out of 5 with {reviewCount} reviews on{" "}
+          <TextLink
+            href={freeIndexLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FreeIndex
+          </TextLink>
+          .
+        </p>
+      </div>
+      <div className="grid grid-cols-1 min-[700px]:grid-cols-2 min-[700px]:gap-x-12">
         {testimonials.map((testimonial) => (
-          <TestimonialCard key={testimonial.name} {...testimonial} />
+          <StudentReview key={testimonial.name} {...testimonial} />
         ))}
       </div>
-    </Section>
-  );
-};
-
-const TestimonialCard = ({ name, instructor, text, img }: Testimonial) => {
-  return (
-    <Card className="flex flex-col">
-      <Quote className="mb-4 size-8 text-primary/50" />
-
-      <p className="flex-1 leading-relaxed text-muted-foreground">{text}</p>
-
-      <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
-        <div className="flex gap-4 items-center">
-          <img src={img} alt="" className="size-12 rounded-full" />
-
-          <div>
-            <p className="text-sm font-semibold text-foreground">{name}</p>
-            <p className="text-xs text-muted-foreground">
-              Student of {instructor}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-0.5">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="size-3.5 fill-primary text-primary" />
-          ))}
-        </div>
+      <div className="mt-5 flex justify-center">
+        <TextLink
+          href={freeIndexLink}
+          className="inline-flex min-h-12 items-center font-semibold"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read more reviews on FreeIndex
+        </TextLink>
       </div>
-    </Card>
+    </Section>
   );
 };

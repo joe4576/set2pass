@@ -17,7 +17,6 @@ type InfoTooltipProps = {
 export const InfoTooltip = ({ label, text }: InfoTooltipProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
-
   return (
     <span className="inline-flex items-center gap-1">
       {label}

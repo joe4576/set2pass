@@ -1,4 +1,4 @@
-import { NoteCard } from "@/components/terms/note-card";
+import { LegalContactDetails } from "@/components/terms/legal-contact-details";
 import { TermsHeaderSection } from "@/components/terms/terms-header-section";
 import { Term, TermsListSection } from "@/components/terms/terms-section";
 import type { Metadata } from "next";
@@ -35,48 +35,14 @@ const terms: Term[] = [
   },
 ];
 
-export default function PrivacyPolicy() {
+const PrivacyPolicy = () => {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <TermsHeaderSection title="Privacy Policy" lastUpdated="24 March 2026" />
 
-      <TermsListSection
-        terms={terms}
-        footer={
-          <NoteCard>
-            <h2
-              className="text-xl font-semibold text-foreground"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Contact Details
-            </h2>
-            <div className="mt-4 flex flex-col gap-2 text-muted-foreground">
-              <p>
-                <span className="font-medium text-foreground">Name:</span> Nikki
-                Brown
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Email:</span>{" "}
-                <a
-                  href="mailto:set2pass@outlook.com"
-                  className="underline underline-offset-2 transition-colors hover:text-foreground"
-                >
-                  set2pass@outlook.com
-                </a>
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Web:</span>{" "}
-                <a
-                  href="https://www.set2pass.co.uk"
-                  className="underline underline-offset-2 transition-colors hover:text-foreground"
-                >
-                  www.set2pass.co.uk
-                </a>
-              </p>
-            </div>
-          </NoteCard>
-        }
-      />
+      <TermsListSection terms={terms} footer={<LegalContactDetails />} />
     </main>
   );
-}
+};
+
+export default PrivacyPolicy;

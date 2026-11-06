@@ -1,13 +1,11 @@
-import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import type { ComponentProps } from "react";
 
-type NoteCardProps = {
-  children: ReactNode;
-};
+type NoteCardProps = ComponentProps<"div">;
 
-export const NoteCard = ({ children }: NoteCardProps) => {
-  return (
-    <div className="rounded-2xl border border-border bg-muted/30 p-6 text-muted-foreground text-sm">
-      {children}
-    </div>
-  );
-};
+export const NoteCard = ({ className, ...props }: NoteCardProps) => (
+  <div
+    className={cn("py-6 [overflow-wrap:anywhere] [&_a]:text-blue", className)}
+    {...props}
+  />
+);

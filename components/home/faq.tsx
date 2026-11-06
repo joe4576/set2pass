@@ -1,24 +1,17 @@
-"use client";
-
-import { Section } from "@/components/common/section";
-import { SectionHeader } from "@/components/common/section-header";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { prices } from "@/lib/constants";
+import { Disclosure } from "@/components/shared/disclosure";
+import { Section } from "@/components/shared/section";
+import { SectionHeader } from "@/components/shared/section-header";
+import { prices, lessonDetails } from "@/lib/constants";
 
 type Faq = {
-  question: string;
   answer: string;
+  question: string;
 };
 
 const faqs: Faq[] = [
   {
     question: "How much do lessons cost?",
-    answer: `Nikki and Sean charge ${prices.hourly} per hour, and each lesson is 90 minutes. We also offer a 5% discount if you book 10 lessons in advance.`,
+    answer: `Nikki and Sean charge ${prices.hourly} per hour, and each lesson is ${lessonDetails.durationMinutes} minutes. We also offer a ${lessonDetails.blockDiscountPercent}% discount if you book ${lessonDetails.blockLessonCount} lessons in advance.`,
   },
   {
     question: "Do you offer automatic lessons?",
@@ -37,8 +30,7 @@ const faqs: Faq[] = [
   },
   {
     question: "Can I book multiple lessons at once?",
-    answer:
-      "Absolutely! We offer a 5% discount if you book 10 lessons in advance. This is a great way to commit to your learning journey and save money.",
+    answer: `Absolutely! We offer a ${lessonDetails.blockDiscountPercent}% discount if you book ${lessonDetails.blockLessonCount} lessons in advance. This is a great way to commit to your learning journey and save money.`,
   },
   {
     question: "Do you provide theory test support?",
@@ -47,40 +39,26 @@ const faqs: Faq[] = [
   },
 ];
 
-export const FAQ = () => {
-  return (
-    <Section id="faq" containerClassName="max-w-3xl" muted>
+export const FAQ = () => (
+  <Section id="faq" spacing="spacious">
+    <div className="min-[1000px]:grid min-[1000px]:grid-cols-[1fr_1.45fr] min-[1000px]:gap-[100px]">
       <SectionHeader
-        title="Frequently Asked Questions"
-        subtitle="Everything you need to know about lessons with Set2Pass."
+        className="min-[1000px]:max-w-[300px]"
+        title="Frequently asked questions"
       />
-
-      <Accordion type="single" collapsible className="mt-12">
-        {faqs.map((faq, i) => (
-          <FaqAccordionItem key={faq.question} {...faq} number={i} />
+      <div className="border-t border-border">
+        {faqs.map((faq) => (
+          <Disclosure
+            key={faq.question}
+            summary={faq.question}
+            summaryClassName="py-[21px]"
+          >
+            <p className="max-w-[650px] pb-[22px] text-muted-foreground">
+              {faq.answer}
+            </p>
+          </Disclosure>
         ))}
-      </Accordion>
-    </Section>
-  );
-};
-
-type FaqAccordionItemProps = Faq & {
-  number: number;
-};
-
-const FaqAccordionItem = ({
-  question,
-  answer,
-  number,
-}: FaqAccordionItemProps) => {
-  return (
-    <AccordionItem key={number} value={`item-${number}`}>
-      <AccordionTrigger className="text-left text-base font-medium">
-        {question}
-      </AccordionTrigger>
-      <AccordionContent className="text-muted-foreground leading-relaxed">
-        {answer}
-      </AccordionContent>
-    </AccordionItem>
-  );
-};
+      </div>
+    </div>
+  </Section>
+);

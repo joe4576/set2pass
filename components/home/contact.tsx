@@ -1,58 +1,41 @@
-import { Section } from "@/components/common/section";
+import { ContactLink } from "@/components/home/contact-link";
+import { Section } from "@/components/shared/section";
 import { Button } from "@/components/ui/button";
-import { Facebook, Mail, Phone } from "lucide-react";
+import { contactDetails } from "@/lib/constants";
 
-export const Contact = () => {
-  return (
-    <Section id="contact" className="bg-primary">
-      <div className="text-center">
-        <h2
-          className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
+export const Contact = () => (
+  <Section
+    id="contact"
+    spacing="spacious"
+    className="bg-blue text-white [&_:focus-visible]:outline-white"
+  >
+    <div className="min-[700px]:grid min-[700px]:grid-cols-2 min-[700px]:items-center min-[700px]:gap-[50px] min-[1000px]:grid-cols-[1.2fr_1fr] min-[1000px]:gap-[100px]">
+      <div>
+        <h2 className="max-w-[560px] text-[clamp(2.6rem,5vw,3.8rem)] text-white">
           Ready to start your driving journey?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-primary-foreground">
+        <p className="mt-6 max-w-[480px]">
           Get in touch today to join our waiting list. We offer automatic
           lessons with Nikki and manual lessons with Sean.
         </p>
-
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 w-64 mx-auto">
-          <Button
-            asChild
-            size="lg"
-            variant="secondary"
-            className="h-12 rounded-full px-8 text-base w-full"
-          >
-            <a href="https://www.facebook.com/Set2Pass" target="_blank">
-              <Facebook className="size-4" />
-              Message us on Facebook
-            </a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="h-12 rounded-full border-primary-foreground/30 bg-transparent px-8 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground w-full"
-          >
-            <a href="tel:+447719997000">
-              <Phone className="size-4" />
-              Call Us
-            </a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="h-12 rounded-full border-primary-foreground/30 bg-transparent px-8 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground w-full"
-          >
-            <a href="mailto:set2pass@outlook.com">
-              <Mail className="size-4" />
-              Email Us
-            </a>
-          </Button>
-        </div>
       </div>
-    </Section>
-  );
-};
+      <div className="mt-[30px] min-[700px]:m-0">
+        <Button asChild size="cta" variant="white" className="w-full">
+          <a
+            href={contactDetails.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Message us on Facebook
+          </a>
+        </Button>
+        <ContactLink href={contactDetails.phoneLink} label="Call us">
+          {contactDetails.phone}
+        </ContactLink>
+        <ContactLink href={`mailto:${contactDetails.email}`} label="Email us">
+          {contactDetails.email}
+        </ContactLink>
+      </div>
+    </div>
+  </Section>
+);

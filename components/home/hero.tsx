@@ -1,54 +1,55 @@
-import { Container } from "@/components/common/container";
+import { HeroPortrait } from "@/components/home/hero-portrait";
+import { ActionGroup } from "@/components/shared/action-group";
+import { Container } from "@/components/shared/container";
+import { PageHeading } from "@/components/shared/page-heading";
+import { TextLink } from "@/components/shared/text-link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
-export const Hero = () => {
-  return (
-    <section className="relative">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero-road.webp"
-          alt="Scenic British road stretching into the distance"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-foreground/75" />
-      </div>
-
-      <Container className="relative z-10 flex flex-col items-center py-28 md:py-40 text-center">
-        <h1
-          className="max-w-3xl text-balance text-5xl font-bold tracking-tight text-primary-foreground md:text-6xl lg:text-7xl"
-          style={{ fontFamily: "var(--font-heading)" }}
+export const Hero = () => (
+  <section className="py-12 min-[700px]:py-16">
+    <Container className="[@media(max-width:699px)]:flex [@media(max-width:699px)]:flex-col min-[700px]:grid min-[700px]:grid-cols-[minmax(0,1fr)_clamp(220px,30vw,300px)] min-[700px]:items-center min-[700px]:gap-8 min-[1024px]:min-h-[440px] min-[1024px]:grid-cols-[minmax(0,1fr)_424px] min-[1024px]:gap-16">
+      <div className="[@media(max-width:699px)]:contents">
+        <PageHeading
+          variant="hero"
+          className="max-w-[700px] [@media(max-width:699px)]:order-0"
         >
-          Learn to drive with Set2Pass
-        </h1>
-
-        <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-primary-foreground/80">
+          Learn to drive
+          <br className="hidden min-[1024px]:inline" /> with Set2Pass
+        </PageHeading>
+        <p className="mt-6 max-w-[510px] leading-[1.6] [@media(max-width:699px)]:order-1">
           Professional driving lessons in Locks Heath and surrounding areas.
           Tailored instruction for every learner, from complete beginners to
           those looking to build their confidence.
         </p>
-
-        <div className="mt-10 flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-6">
+        <ActionGroup className="mt-[26px] gap-x-6 gap-y-[18px] [@media(max-width:699px)]:contents">
           <Button
             asChild
-            size="lg"
-            className="h-12 rounded-full px-8 text-base"
+            size="cta"
+            variant="cta"
+            className="[@media(max-width:699px)]:order-5 [@media(max-width:699px)]:mt-[26px] [@media(max-width:699px)]:w-full"
           >
-            <a href="#contact">
-              Start Your Journey
-              <ArrowRight className="ml-1 size-4" />
-            </a>
+            <a href="#contact">Start your journey</a>
           </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="h-12 rounded-full border-primary-foreground/30 px-8 text-base text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent"
+          <TextLink
+            href="#instructors"
+            className="inline-flex min-h-11 items-center text-[16px] font-semibold [@media(max-width:699px)]:order-4 [@media(max-width:699px)]:mt-5 [@media(max-width:699px)]:self-center [@media(max-width:699px)]:justify-center"
           >
-            <a href="#instructors">Meet Our Instructors</a>
-          </Button>
-        </div>
-      </Container>
-    </section>
-  );
-};
+            Meet our instructors
+          </TextLink>
+        </ActionGroup>
+      </div>
+      <div className="mx-auto mt-8 grid max-w-[300px] grid-cols-2 gap-6 [@media(max-width:699px)]:order-3 [@media(max-width:699px)]:flex [@media(max-width:699px)]:w-full [@media(max-width:699px)]:max-w-none [@media(max-width:699px)]:justify-center [@media(max-width:699px)]:gap-[clamp(16px,5vw,32px)] min-[700px]:m-0 min-[700px]:max-w-none min-[700px]:gap-3 min-[1024px]:max-w-[424px] min-[1024px]:gap-6">
+        <HeroPortrait
+          image="/images/nikki.webp"
+          lessonType="Automatic"
+          name="Nikki Brown"
+        />
+        <HeroPortrait
+          image="/images/sean.webp"
+          lessonType="Manual"
+          name="Sean Brown"
+        />
+      </div>
+    </Container>
+  </section>
+);

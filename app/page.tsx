@@ -6,9 +6,9 @@ import { Instructors } from "@/components/home/instructors";
 import { Stats } from "@/components/home/stats";
 import { Testimonials } from "@/components/home/testimonials";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <Hero />
       <Stats />
       <About />
@@ -18,4 +18,6 @@ export default function Home() {
       <Contact />
     </main>
   );
-}
+};
+
+export default Home;

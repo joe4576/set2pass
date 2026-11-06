@@ -1,0 +1,4 @@
+/driveclass /apps/driveclass 301
+/mispeedo /apps/mi-speedo 301
+/driveclass/* /apps/driveclass/:splat 301
+/mispeedo/* /apps/mi-speedo/:splat 301

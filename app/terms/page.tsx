@@ -1,3 +1,4 @@
+import { LegalContactDetails } from "@/components/terms/legal-contact-details";
 import { NoteCard } from "@/components/terms/note-card";
 import { TermsHeaderSection } from "@/components/terms/terms-header-section";
 import { Term, TermsListSection } from "@/components/terms/terms-section";
@@ -87,9 +88,9 @@ const terms: Term[] = [
   },
 ];
 
-export default function TermsAndConditions() {
+const TermsAndConditions = () => {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <TermsHeaderSection
         title="Terms and Conditions"
         subtitle="The following Terms and Conditions apply to anyone receiving driver training with Set2Pass Driving School or its trainers/subcontractors."
@@ -106,7 +107,7 @@ export default function TermsAndConditions() {
               <a
                 href="https://www.gov.uk/contact-dvsa"
                 target="_blank"
-                className="underline underline-offset-2 transition-colors hover:text-foreground"
+                className="underline underline-offset-2 transition-colors hover:text-blue"
               >
                 https://www.gov.uk/contact-dvsa
               </a>
@@ -114,50 +115,10 @@ export default function TermsAndConditions() {
             </p>
           </NoteCard>
         }
-        footer={
-          <NoteCard>
-            <h2
-              className="text-xl font-semibold text-foreground"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Contact Details
-            </h2>
-            <div className="mt-4 flex flex-col gap-2 text-muted-foreground">
-              <p>
-                <span className="font-medium text-foreground">Name:</span> Nikki
-                Brown
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Phone:</span>{" "}
-                <a
-                  href="tel:07719997000"
-                  className="underline underline-offset-2 transition-colors hover:text-foreground"
-                >
-                  0771 999 7000
-                </a>
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Email:</span>{" "}
-                <a
-                  href="mailto:set2pass@outlook.com"
-                  className="underline underline-offset-2 transition-colors hover:text-foreground"
-                >
-                  set2pass@outlook.com
-                </a>
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Web:</span>{" "}
-                <a
-                  href="https://www.set2pass.co.uk"
-                  className="underline underline-offset-2 transition-colors hover:text-foreground"
-                >
-                  www.set2pass.co.uk
-                </a>
-              </p>
-            </div>
-          </NoteCard>
-        }
+        footer={<LegalContactDetails showPhone />}
       />
     </main>
   );
-}
+};
+
+export default TermsAndConditions;

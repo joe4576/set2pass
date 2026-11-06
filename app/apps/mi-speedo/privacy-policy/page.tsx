@@ -38,9 +38,9 @@ const terms: Term[] = [
   },
 ];
 
-export default function MiSpeedoPrivacyPolicy() {
+const MiSpeedoPrivacyPolicy = () => {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <TermsHeaderSection
         title="Privacy Policy"
         subtitle="MiSpeedo (“the Service”) collects and uses information only to provide and improve the app. By using the Service, you agree to this policy."
@@ -49,4 +49,6 @@ export default function MiSpeedoPrivacyPolicy() {
       <TermsListSection terms={terms} />
     </main>
   );
-}
+};
+
+export default MiSpeedoPrivacyPolicy;

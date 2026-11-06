@@ -29,9 +29,9 @@ const terms: Term[] = [
   },
 ];
 
-export default function DriveClassPrivacyPolicy() {
+const DriveClassPrivacyPolicy = () => {
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       <TermsHeaderSection
         title="Privacy Policy"
         subtitle="DriveClass (“the Service”) collects and uses information only to provide and improve the app. By using the Service, you agree to this policy."
@@ -40,4 +40,6 @@ export default function DriveClassPrivacyPolicy() {
       <TermsListSection terms={terms} />
     </main>
   );
-}
+};
+
+export default DriveClassPrivacyPolicy;

@@ -10,7 +10,10 @@ type PostHogProviderProps = {
 
 export const PostHogProvider = ({ children }: PostHogProviderProps) => {
   useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
+    if (
+      process.env.NODE_ENV === "development" ||
+      !process.env.NEXT_PUBLIC_POSTHOG_KEY
+    ) {
       return;
     }
 

@@ -1,19 +1,42 @@
-import { Footer } from "@/components/common/footer";
-import { Navbar } from "@/components/common/navbar";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
 import { cn } from "@/lib/utils";
 import { PostHogProvider } from "@/providers/posthog-provider";
 import { ReviewCountProvider } from "@/providers/review-count-provider";
 import type { Metadata } from "next";
-import { DM_Sans, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const bodyFont = localFont({
+  src: [
+    {
+      path: "../public/fonts/barlow-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/barlow-semibold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+const headingFont = localFont({
+  src: "../public/fonts/barlow-condensed-bold.woff2",
+  weight: "700",
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
 
 const title = "Set2Pass Driving School | Learn to Drive in Locks Heath";
+
 const description =
   "Professional driving lessons in Locks Heath and surrounding areas. Automatic and manual lessons available.";
+
 const url = "https://set2pass.co.uk";
 
 export const metadata: Metadata = {
@@ -47,13 +70,16 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <html
-      lang="en"
-      className={cn(dmSans.variable, inter.variable, "scroll-smooth")}
-    >
-      <body className="font-sans antialiased">
+    <html lang="en" className={cn(bodyFont.variable, headingFont.variable)}>
+      <body>
+        <a
+          className="fixed -top-[100px] left-5 z-100 bg-blue px-5 py-3 text-white focus:top-3"
+          href="#main-content"
+        >
+          Skip to content
+        </a>
         <PostHogProvider>
           <ReviewCountProvider>
             <Navbar />
@@ -64,4 +90,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
